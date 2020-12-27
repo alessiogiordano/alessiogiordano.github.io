@@ -8,11 +8,20 @@
   <description>Il Blog di Alessio Giordano</description>
   
   <item>
+    <title>Aggiornamento 2.0 per Tombola</title>
+    <category>Prodotti</category>
+    <pubDate>28/12/20</pubDate>
+    <link>https://www.alessiogiordano.net/blog/tombola-2-update/it/index.html</link>
+    <enclosure url="https://www.alessiogiordano.net/blog/tombola-2-update/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
+    <description>La versione 2.0 è ora disponibile con dozzine di nuove funzionalità e la compatibilità con gli ultimi sistemi operativi</description>
+  </item>
+  
+  <item>
     <title>Annuncio Tombola</title>
     <category>Prodotti</category>
     <pubDate>18/04/20</pubDate>
     <link>https://www.alessiogiordano.net/blog/introducing-tombola/it/index.html</link>
-    <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/it/light-screenshot.jpg" type="image/png" darkmode="true" />
+    <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
     <description>Una nuova app iPadOS e macOS per giocare a una partita di Tombola attraverso qualunque servizio di video conferenza</description>
   </item>
   

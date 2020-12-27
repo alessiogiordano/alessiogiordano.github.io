@@ -14,7 +14,7 @@ function AGita() {
 		document.querySelector("#AGtwo .AGlabel").innerText = "Blog";
 		document.querySelector("#AGthree .AGlabel").innerText = "Contatti";
 		document.getElementById("AGtemp").innerText = "Carico le previsioni...";
-		document.getElementById("AGcopy").innerText = "© Alessio Giordano 2020 - Tutte le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
+		document.getElementById("AGcopy").innerText = "© 2020 Alessio Giordano - Tutte le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
 	} else if(document.querySelectorAll("#AGsubscribe").length != 0) {
 		// Blog
 		document.querySelector("#AGsubscribe").innerText = "Iscriviti al feed RSS";
@@ -26,6 +26,7 @@ function AGita() {
 		document.querySelectorAll(".AGbreadtitle")[1].innerText = "Contatti";
 		document.querySelectorAll(".AGconlink")[0].childNodes[1].innerText = "Invia un messaggio di posta";
 		document.querySelectorAll(".AGconlink")[1].childNodes[1].innerText = "Iscriviti al feed RSS"
+		document.querySelectorAll(".AGconlink")[2].childNodes[1].innerText = "Segui su Twitter"
 	} else if(document.querySelectorAll(".AGproduct").length != 0) {
 		// Products
 		document.querySelectorAll(".AGbreadtitle")[1].innerText = "Prodotti";
@@ -291,7 +292,7 @@ function AGgetproducts() {
 				body += '</p><h4>';
 				body += category;
 				body += ' - ';
-				var language = navigator.language || navigator.userLanguage;
+				var language = navigator.language.substring(0,2) || navigator.userLanguage.substring(0,2);
 				if((ios!=undefined)&&(mac!=undefined)) {
 					if((iphone == "true") && (ipad == "true") && (watch == "true") && (tv == "true")) {
 						switch(language) {
