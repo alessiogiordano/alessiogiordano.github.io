@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<highlights>
+  <title>Highlights (Italiano) - alessiogiordano.net</title>
+  <language>it</language>
+  <link>https://www.alessiogiordano.net</link>
+  <description>Gli Highlights della pagina iniziale di Alessio Giordano</description>
+  
+  <item>
+    <title>Aggiornamento 2.0 per Tombola</title>
+    <description>Tombola 2.0 è ora disponibile per iPad and Mac</description>
+    <link>/blog/tombola-2-update/it/</link>
+    <large url="tombola-2-update/it/banner-large.jpg" type="image/jpg" />
+    <small url="tombola-2-update/it/banner-small.jpg" type="image/jpg" />
+  </item>
+  
+  <item>
+    <title>Annuncio Tombola</title>
+    <description>Tombola è ora disponibile per iPad e Mac</description>
+    <link>/blog/introducing-tombola/it/</link>
+    <large url="introducing-tombola/it/tombola-large.png" type="image/png" />
+    <small url="introducing-tombola/it/tombola-small.png" type="image/png" />
+  </item>
+  
+</highlights>

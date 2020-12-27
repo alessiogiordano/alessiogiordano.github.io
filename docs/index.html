@@ -1,0 +1,71 @@
+<!-- HomePage del sito personale "alessiogiordano.net" iniziato il 01/02/20 -->
+
+<!DOCYPE html>
+<html>
+<head>
+	<title>alessiogiordano.net</title>
+	<meta name="application-name" content="AG HomePage" />
+	<meta name="author" content="Alessio Giordano" />
+	<meta name="description" content="Welcome to alessiogiordano.net, the HomePage of Alessio Giordano" />
+	<meta charset="UTF-8" />
+	<!-- ------------------------------------ -->
+	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, Blog, iOS, Tombola by AG, Tombola, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="/script.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body onload="AGactivatehref(); AGinternationalize(); AGgetdock(); AGgethighlights(); AGgetweather()">
+	<div id="AGwallpaper">
+	<div id="AGcontainer">
+		<div id="AGprofile">
+			<div id="AGpic"><img id="AGpicimg" srcset="assets/profile/max.jpg 2845w, assets/profile/med.jpg 1423w, assets/profile/low.jpg 712w, assets/profile/ulow.jpg 256w" src="assets/profile/ulow.jpg"  draggable="false"/></div>
+			<div id="AGname">Alessio Giordano</div>
+			<div id="AGusername">@alssgrdn</div>
+		</div>
+		<div id="AGgrid">
+			<div id="AGtoprow" class="AGrow">
+				<div id="AGone" class="AGrowmember">
+					<div class="AGicon AGactivatehref" data-href="products/"><img src="assets/weather/PRD.svg" class="AGproductsicon" /></div>
+					<div class="AGlabel">Products</div>
+				</div>
+				<div id="AGtwo" class="AGrowmember">
+					<div class="AGicon AGactivatehref" data-href="blog/"><img src="assets/weather/BLG.svg" class="AGblogicon" /></div>
+					<div class="AGlabel">Blog</div>
+				</div>
+				<div id="AGthree" class="AGrowmember">
+					<div class="AGicon AGactivatehref" data-href="contacts/"><img src="assets/weather/CNT.svg" class="AGcontactsicon" /></div>
+					<div class="AGlabel">Contacts</div>
+				</div>
+			</div>
+			<div id="AGmiddlerow" class="AGrow AGactivatehref" data-href="https://tombola.alessiogiordano.net"></div>
+			<div id="AGbottomrow" class="AGrow">
+				<div id="AGfour" class="AGrowmember AGnotpopulated">
+					<div class="AGicon"><img src="assets/weather/13d.svg" /></div>
+					<div class="AGlabel">Coming soon...</div>
+				</div>
+				<div id="AGfive" class="AGrowmember AGnotpopulated">
+					<div class="AGicon"><img src="assets/weather/13d.svg" /></div>
+					<div class="AGlabel">Coming soon...</div>
+				</div>
+				<div id="AGsix" class="AGrowmember AGnotpopulated">
+					<div class="AGicon"><img src="assets/weather/13d.svg" /></div>
+					<div class="AGlabel">Coming soon...</div>
+				</div>
+			</div>
+		</div>
+		<div id="AGweather">
+			<div id="AGicon"><img id="AGiconimg" src="assets/weather/000.svg"></div>
+			<div id="AGcity">Catania</div>
+			<div id="AGtemp">Loading forecast...</div>
+		</div>
+	</div>
+	</div>
+	<div id="AGfooter">
+		<div id="AGsimplecopy">© Alessio Giordano 2020</div>
+		<marquee id="AGcopy" truespeed scrolldelay="18" scrollamount="1">© Alessio Giordano 2020 - All emojis used in this page are licensed under CC BY-SA 4.0 from OpenMoji. Weather data is provided by the free API of Open Weather Map under CC BY-SA 4.0 license.</marquee>
+		<img id="AGita" class="AGflag" src="assets/weather/ITA.svg" />
+		<img id="AGeur" class="AGflag" src="assets/weather/EUR.svg" />
+	</div>
+</body>
+</html>

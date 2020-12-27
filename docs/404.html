@@ -1,25 +1,43 @@
----
-permalink: /404.html
-layout: default
----
+<!-- Pagina 404 del sito personale "alessiogiordano.net" iniziato il 16/04/20 -->
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<!DOCYPE html>
+<html>
+<head>
+	<title>404 - alessiogiordano.net</title>
+	<meta name="application-name" content="404 Page Not Found" />
+	<meta name="author" content="Alessio Giordano" />
+	<meta name="description" content="A fallback page shown when the requested page is not available on the server" />
+	<meta charset="UTF-8" />
+	<!-- Remember to remove before publishing -->
+	<meta name="robots" content="noindex" />
+	<meta name="AdsBot-Google" content="noindex" />
+	<!-- ------------------------------------ -->
+	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="/script.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="alternate" type="application/rss+xml" title="Subscribe to the blog" href="en.rss" />
+</head>
+<body id="AGnestedbody" onload="AGactivatehref(); AGinternationalize();">
+	<div id="AGbackdrop"></div>
+	<div id="AGbreadcrumbs">
+		<div id="AGlevel0" class="AGbreadcrumb AGactivatehref" data-href="/">
+			<div id="AGbreadpic"><img id="AGbreadpicimg" srcset="/assets/profile/max.jpg 2845w, /assets/profile/med.jpg 1423w, /assets/profile/low.jpg 712w, /assets/profile/ulow.jpg 256w" src="/assets/profile/ulow.jpg"  draggable="false"/></div>
+			<div class="AGbreadtitle">Alessio Giordano</div>
+		</div>
+		<div id="AGlevel1" class="AGbreadcrumb AGactivatehref" data-href="javascript:window.location.reload()">
+			<div class="AGbreadarrow">►</div>
+			<div class="AGbreadtitle">Page not Found</div>
+		</div>
+	</div>
+	<div id="AGpageshadow"></div>
+	<div id="AGpage">
+		<article id="AGarticle">
+			<section class="AGnotfound AGactivatehref" data-href="/" data-title="404" data-description="Page not Found" data-category="HTTP Error Message">
+				<div><h1>404</h1><p>Page not found</p><h4>Please return to the homepage</h4></div>
+			</section>
+		</article>
+	</div>
+</body>
+</html>

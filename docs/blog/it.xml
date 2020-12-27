@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Blog (Italiano) - alessiogiordano.net</title>
+  <language>it</language>
+  <link>https://www.alessiogiordano.net</link>
+  <description>Il Blog di Alessio Giordano</description>
+  
+  <item>
+    <title>Annuncio Tombola</title>
+    <category>Prodotti</category>
+    <pubDate>18/04/20</pubDate>
+    <link>https://www.alessiogiordano.net/blog/introducing-tombola/it/index.html</link>
+    <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/it/light-screenshot.jpg" type="image/png" darkmode="true" />
+    <description>Una nuova app iPadOS e macOS per giocare a una partita di Tombola attraverso qualunque servizio di video conferenza</description>
+  </item>
+  
+</channel>
+
+</rss>

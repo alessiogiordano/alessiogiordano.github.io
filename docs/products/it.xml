@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<products>
+  <title>Prodotti (Italiano) - alessiogiordano.net</title>
+  <language>it</language>
+  <link>https://www.alessiogiordano.net</link>
+  <description>I Prodotti di Alessio Giordano</description>
+  
+  <item>
+    <title>Tombola</title>
+    <description>Fai il banco in una partita di Tombola in video conferenza</description>
+    <category>Giochi da Tavolo</category>
+    <price>Gratis</price>
+    <link>https://tombola.alessiogiordano.net/</link>
+    <ios iphone="false" ipad="true" watch="false" tv="false">https://apps.apple.com/app/id1508216655</ios>
+    <mac>https://apps.apple.com/app/id1508216655</mac>
+    <icon url="tombola/icon.png" type="image/png" />
+  </item>
+  
+</products>

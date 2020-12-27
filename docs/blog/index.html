@@ -1,0 +1,45 @@
+<!-- Blog del sito personale "alessiogiordano.net" iniziato il 13/04/20 -->
+
+<!DOCYPE html>
+<html>
+<head>
+	<title>Blog - alessiogiordano.net</title>
+	<meta name="application-name" content="The Alessio Giordano Blog" />
+	<meta name="author" content="Alessio Giordano" />
+	<meta name="description" content="Announcements about product releases and other stuff." />
+	<meta charset="UTF-8" />
+	<!-- ------------------------------------ -->
+	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="/script.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="alternate" type="application/rss+xml" title="Subscribe to the blog" href="en.rss" />
+</head>
+<body id="AGnestedbody" onload="AGactivatehref(); AGinternationalize(); AGgetblogposts(); ">
+	<div id="AGbackdrop"></div>
+	<div id="AGbreadcrumbs">
+		<div id="AGlevel0" class="AGbreadcrumb AGactivatehref" data-href="/">
+			<div id="AGbreadpic"><img id="AGbreadpicimg" srcset="/assets/profile/max.jpg 2845w, /assets/profile/med.jpg 1423w, /assets/profile/low.jpg 712w, /assets/profile/ulow.jpg 256w" src="/assets/profile/ulow.jpg"  draggable="false"/></div>
+			<div class="AGbreadtitle">Alessio Giordano</div>
+		</div>
+		<div id="AGlevel1" class="AGbreadcrumb AGactivatehref" data-href="javascript:window.location.reload()">
+			<div class="AGbreadarrow">►</div>
+			<div class="AGbreadtitle">Blog</div>
+		</div>
+	</div>
+	<div id="AGpageshadow"></div>
+	<div id="AGpage">
+		<article id="AGarticle">
+			<header>
+				<div id="AGsubscribe" class="AGactivatehref" data-href="en.xml">Subscribe to RSS feed</div>
+				<input type="search" placeholder="Search blog post..." oninput="AGfilter()" />
+			</header>
+			<section class="AGloader">
+				<h1>Please wait while the posts get loaded</h1>
+				<svg width="104px" height="104px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-spin"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><g transform="translate(50 50)"><g transform="rotate(0) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.07312 1.07312)"><animate attributeName="opacity" from="1" to="0.1" begin="0s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(45) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.13312 1.13312)"><animate attributeName="opacity" from="1" to="0.1" begin="0.12s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.12s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(90) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.19812 1.19812)"><animate attributeName="opacity" from="1" to="0.1" begin="0.25s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.25s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(135) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.25812 1.25812)"><animate attributeName="opacity" from="1" to="0.1" begin="0.37s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.37s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(180) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.32312 1.32312)"><animate attributeName="opacity" from="1" to="0.1" begin="0.5s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.5s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(225) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.38312 1.38312)"><animate attributeName="opacity" from="1" to="0.1" begin="0.62s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.62s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(270) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.44812 1.44812)"><animate attributeName="opacity" from="1" to="0.1" begin="0.75s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.75s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g><g transform="rotate(315) translate(34 0)"><circle cx="0" cy="0" r="8" fill="#ffffff" transform="scale(1.00812 1.00812)"><animate attributeName="opacity" from="1" to="0.1" begin="0.87s" dur="1s" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="scale" from="1.5" to="1" begin="0.87s" dur="1s" repeatCount="indefinite"></animateTransform></circle></g></g></svg>
+			</section>
+		</article>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<products>
+  <title>Products (English) - alessiogiordano.net</title>
+  <language>en</language>
+  <link>https://www.alessiogiordano.net</link>
+  <description>The Alessio Giordano Products</description>
+  
+  <item>
+    <title>Tombola</title>
+    <description>Play a game of Tombola via any video call service</description>
+    <category>Board Games</category>
+    <price>Free</price>
+    <link>https://tombola.alessiogiordano.net/</link>
+    <ios iphone="false" ipad="true" watch="false" tv="false">https://apps.apple.com/app/id1508216655</ios>
+    <mac>https://apps.apple.com/app/id1508216655</mac>
+    <icon url="tombola/icon.png" type="image/png" />
+  </item>
+  
+</products>

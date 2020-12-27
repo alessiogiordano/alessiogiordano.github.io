@@ -1,0 +1,54 @@
+<!-- Pagina dei contatti del sito personale "alessiogiordano.net" iniziata il 14/04/20 -->
+
+<!DOCYPE html>
+<html>
+<head>
+	<title>Contacts - alessiogiordano.net</title>
+	<meta name="application-name" content="Alessio Giordano's contact info'" />
+	<meta name="author" content="Alessio Giordano" />
+	<meta name="description" content="A list of contacts, such as email and rss feeds" />
+	<meta charset="UTF-8" />
+	<!-- ------------------------------------ -->
+	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="/script.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body id="AGnestedbody" onload="AGactivatehref(); AGinternationalize();">
+	<div id="AGbackdrop"></div>
+	<div id="AGbreadcrumbs">
+		<div id="AGlevel0" class="AGbreadcrumb AGactivatehref" data-href="/">
+			<div id="AGbreadpic"><img id="AGbreadpicimg" srcset="/assets/profile/max.jpg 2845w, /assets/profile/med.jpg 1423w, /assets/profile/low.jpg 712w, /assets/profile/ulow.jpg 256w" src="/assets/profile/ulow.jpg"  draggable="false"/></div>
+			<div class="AGbreadtitle">Alessio Giordano</div>
+		</div>
+		<div id="AGlevel1" class="AGbreadcrumb AGactivatehref" data-href="javascript:window.location.reload()">
+			<div class="AGbreadarrow">►</div>
+			<div class="AGbreadtitle">Contacts</div>
+		</div>
+	</div>
+	<div id="AGpageshadow"></div>
+	<div id="AGpage">
+		<article id="AGarticle" class="AGbuttonfix">
+			<div id="AGconprof">
+				<div id="AGconpic"><img id="AGconpicimg" srcset="/assets/profile/max.jpg 2845w, /assets/profile/med.jpg 1423w, /assets/profile/low.jpg 712w, /assets/profile/ulow.jpg 256w" src="/assets/profile/ulow.jpg"  draggable="false"/></div>
+			</div>
+			<section id="AGcontactspage">
+				<div id="AGconname">Alessio Giordano</div>
+				<div id="AGcontag">@alssgrdn</div>
+				<section class="AGconlink AGactivatehref" data-href="mailto:contact@alessiogiordano.net" style="background: linear-gradient(#29FB5A, #00C22A)"><img src="../assets/weather/CNT.svg"/><div>Send email message</section>
+				<section class="AGconlink AGactivatehref" data-href="/blog/en.xml" style="background: linear-gradient(#FF9E2C, #FF5F24)"><img src="/assets/weather/RSS.svg" style="height: 2em!important;padding: 0.5em 0;border-radius: 0;"/><div>Subscribe to RSS feed</section>
+			</section>
+		</article>
+	</div>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="/__/firebase/7.14.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="/__/firebase/7.14.0/firebase-analytics.js"></script>
+
+	<!-- Initialize Firebase -->
+	<script src="/__/firebase/init.js"></script>
+</body>
+</html>
