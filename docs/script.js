@@ -173,7 +173,7 @@ function AGgetblogposts() {
 	request.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
 			var dom = request.responseXML;
-			var articles = dom.getElementsByTagName("item");
+			var articles = dom.getElementsByTagName("entry");
 			var existing = document.querySelectorAll('section');
 			for (let i = 0; i < existing.length; i++) {
 				existing[i].parentNode.removeChild(existing[i]);
