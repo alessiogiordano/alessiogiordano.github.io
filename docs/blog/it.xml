@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-
-<channel>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   <title>Blog by AG (IT)</title>
   <language>it</language>
   <link>https://www.alessiogiordano.net</link>
@@ -11,6 +9,7 @@
   
   <entry>
     <title>Aggiornamento 2.0 per Tombola</title>
+    <id>2</id>
     <category>Prodotti</category>
     <published>2020-12-28T00:02:00+01:00</published>
     <updated>2020-12-28T00:02:00+01:00</updated>
@@ -22,6 +21,7 @@
   
   <entry>
     <title>Annuncio Tombola</title>
+    <id>1</id>
     <category>Prodotti</category>
     <published>2020-04-18T22:32:00+01:00</published>
     <updated>2020-04-18T22:32:00+01:00</updated>
@@ -31,6 +31,4 @@
     <description>Una nuova app iPadOS e macOS per giocare a una partita di Tombola attraverso qualunque servizio di video conferenza</description>
   </entry>
   
-</channel>
-
-</rss>
+</feed>
