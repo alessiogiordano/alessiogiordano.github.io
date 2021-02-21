@@ -2,7 +2,7 @@
 <rss version="2.0">
 
 <channel>
-  <title>Blog (Italiano) - alessiogiordano.net</title>
+  <title>Blog by AG (IT)</title>
   <language>it</language>
   <link>https://www.alessiogiordano.net</link>
   <description>Il Blog di Alessio Giordano</description>
@@ -10,6 +10,8 @@
   <item>
     <title>Aggiornamento 2.0 per Tombola</title>
     <category>Prodotti</category>
+    <published>2020-12-28T00:02:00+01:00</published>
+    <updated>2020-12-28T00:02:00+01:00</updated>
     <pubDate>28/12/20</pubDate>
     <link>https://www.alessiogiordano.net/blog/tombola-2-update/it/index.html</link>
     <enclosure url="https://www.alessiogiordano.net/blog/tombola-2-update/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
@@ -19,6 +21,8 @@
   <item>
     <title>Annuncio Tombola</title>
     <category>Prodotti</category>
+    <published>2020-04-18T22:32:00+01:00</published>
+    <updated>2020-04-18T22:32:00+01:00</updated>
     <pubDate>18/04/20</pubDate>
     <link>https://www.alessiogiordano.net/blog/introducing-tombola/it/index.html</link>
     <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
