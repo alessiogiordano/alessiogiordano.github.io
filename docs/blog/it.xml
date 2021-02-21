@@ -9,50 +9,30 @@
   
   <entry>
     <title>Aggiornamento 2.0 per Tombola</title>
-    <id>2</id>
-    <category>Prodotti</category>
     <author><name>Alessio Giordano</name></author>
     <published>2020-12-28T00:02:00+01:00</published>
     <updated>2020-12-28T00:02:00+01:00</updated>
+    <agCategory>Products</category>
     <agShortDate>28/12/20</agShortDate>
     <agPicture url="https://www.alessiogiordano.net/blog/tombola-2-update/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
     <id>https://www.alessiogiordano.net/blog/tombola-2-update/it/index.html</id>
     <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/blog/tombola-2-update/it/index.html"/>
     <summary>La versione 2.0 è ora disponibile con dozzine di nuove funzionalità e la compatibilità con gli ultimi sistemi operativi</summary>
-    <content type="html">
-      <img alt="" src="https://www.alessiogiordano.net/blog/tombola-2-update/it/light-screenshot.jpg" />
-      <p>Tombola 2.0 è una versione completamente rinnovata dell'applicazione, disponibile da oggi su <a href="https://apps.apple.com/app/id1508216655">App Store</a> per iPadOS e macOS.</p>
-			<p>Ecco alcune novità:</p>
-			<ul>
-				<li>Piena compatibilità con iPadOS 14, macOS 11 Big Sur e i nuovi Mac con Apple Silicon</li>
-				<li>Una nuova pagina di benvenuto, opzionalmente disattivabile, permette di vedere a colpo d'occhio le ultime tre partite giocate</li>
-				<li>Si può giocare con una cartella direttamente nell'app, senza bisogno di andare sul web</li>
-				<li>Per impostazione predefinita, insieme alle cartelle il link contiene una stanza di Skype Meet Now oppure opzionalmente su Jitsi Meet</li>
-				<li>Arriva il supporto ad iCloud per conservare e sincronizzare le partite online con tutti i propri dispositivi</li>
-				<li>La funzionalità di Text-To-Speech è più discreta, pronunciando solo il numero pescato, e si può anche disattivare</li>
-				<li>Aggiunta localizzazione in lingua inglese</li>
-			</ul>
-			<p>Come la versione precedente, Tombola 2.0 è completamente gratuita</p>
-    </content>
+    <content type="html"> <img alt="" src="https://www.alessiogiordano.net/blog/tombola-2-update/it/light-screenshot.jpg" /><p>Tombola 2.0 è una versione completamente rinnovata dell'applicazione, disponibile da oggi su <a href="https://apps.apple.com/app/id1508216655">App Store</a> per iPadOS e macOS.</p><p>Ecco alcune novità:</p><ul><li>Piena compatibilità con iPadOS 14, macOS 11 Big Sur e i nuovi Mac con Apple Silicon</li><li>Una nuova pagina di benvenuto, opzionalmente disattivabile, permette di vedere a colpo d'occhio le ultime tre partite giocate</li><li>Si può giocare con una cartella direttamente nell'app, senza bisogno di andare sul web</li><li>Per impostazione predefinita, insieme alle cartelle il link contiene una stanza di Skype Meet Now oppure opzionalmente su Jitsi Meet</li><li>Arriva il supporto ad iCloud per conservare e sincronizzare le partite online con tutti i propri dispositivi</li><li>La funzionalità di Text-To-Speech è più discreta, pronunciando solo il numero pescato, e si può anche disattivare</li><li>Aggiunta localizzazione in lingua inglese</li></ul><p>Come la versione precedente, Tombola 2.0 è completamente gratuita</p> </content>
   </entry>
   
   <entry>
     <title>Annuncio Tombola</title>
-    <category>Prodotti</category>
     <author><name>Alessio Giordano</name></author>
     <published>2020-04-18T22:32:00+01:00</published>
     <updated>2020-04-18T22:32:00+01:00</updated>
+    <agCategory>Products</category>
     <agShortDate>18/04/20</agShortDate>
     <agPicture url="https://www.alessiogiordano.net/blog/introducing-tombola/it/light-screenshot.jpg" type="image/jpg" darkmode="true" />
     <id>https://www.alessiogiordano.net/blog/introducing-tombola/it/index.html</id>
     <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/blog/introducing-tombola/it/index.html"/>
     <description>Una nuova app iPadOS e macOS per giocare a una partita di Tombola attraverso qualunque servizio di video conferenza</description>
-    <content type="html">
-      <img alt="" src="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" />
-      <p>Oggi rilascio Tombola negli App Store di iPad e Mac.</p>
-			<p>Questa applicazione ti permette di giocare a una partita di Tombola attraverso la condivisione dello schermo di Skype, Zoom e altri servizi. Basta installare l'app e creare una nuova partita: tramite il pulsante "Invita" puoi condividere uno url con gli altri giocatori per distribuire loro delle cartelle generate casualmente; questo vuol dire che puoi giocare con qualunque numero di persone che vuoi.</p>
-			<p>L'app è completamente gratuita ed è disponibile ora. <a href="https://apps.apple.com/app/id1508216655">Scaricala ora</a></p>
-    </content>
+    <content type="html"> <img alt="" src="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" /><p>Oggi rilascio Tombola negli App Store di iPad e Mac.</p><p>Questa applicazione ti permette di giocare a una partita di Tombola attraverso la condivisione dello schermo di Skype, Zoom e altri servizi. Basta installare l'app e creare una nuova partita: tramite il pulsante "Invita" puoi condividere uno url con gli altri giocatori per distribuire loro delle cartelle generate casualmente; questo vuol dire che puoi giocare con qualunque numero di persone che vuoi.</p><p>L'app è completamente gratuita ed è disponibile ora. <a href="https://apps.apple.com/app/id1508216655">Scaricala ora</a></p> </content>
   </entry>
   
 </feed>
