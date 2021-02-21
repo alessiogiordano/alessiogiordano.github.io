@@ -188,7 +188,7 @@ function AGgetblogposts() {
 				for (let j = 0; j < article.length; j++) {
 					switch(article[j].tagName) {
 						case "title": title = article[j].textContent; break;
-						case "category": category = article[j].textContent; break;
+						case "agCategory": category = article[j].textContent; break;
 						case "agShortDate": date = article[j].textContent; break;
 						case "id": url = article[j].textContent; break;
 						case "agPicture": image = article[j].getAttribute('url'); if(article[j].getAttribute('darkmode') == "true") { darkIsAvailable = true }; break;
