@@ -5,9 +5,11 @@
   <title>Blog by AG (EN)</title>
   <language>en</language>
   <link>https://www.alessiogiordano.net</link>
+  <icon>https://www.alessiogiordano.net/assets/profile/low.jpg</icon>
   <description>The Alessio Giordano Blog</description>
+  <updated>2021-02-21T23:34:00+01:00</updated>
   
-  <item>
+  <entry>
     <title>Tombola 2.0 Update</title>
     <category>Products</category>
     <published>2020-12-28T00:02:00+01:00</published>
@@ -16,9 +18,9 @@
     <link>https://www.alessiogiordano.net/blog/tombola-2-update/en/index.html</link>
     <enclosure url="https://www.alessiogiordano.net/blog/tombola-2-update/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
     <description>Version 2.0 is now available with dozens of new features and compatibility with the latest OSs</description>
-  </item>
+  </entry>
   
-  <item>
+  <entry>
     <title>Introducing Tombola</title>
     <category>Products</category>
     <published>2020-04-18T22:32:00+01:00</published>
@@ -27,7 +29,7 @@
     <link>https://www.alessiogiordano.net/blog/introducing-tombola/en/index.html</link>
     <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
     <description>A new iPadOS and macOS app for playing a game of Tombola via any video call service</description>
-  </item>
+  </entry>
   
 </channel>
 
