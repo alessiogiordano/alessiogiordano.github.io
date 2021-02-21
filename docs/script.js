@@ -189,7 +189,7 @@ function AGgetblogposts() {
 					switch(article[j].tagName) {
 						case "title": title = article[j].textContent; break;
 						case "category": category = article[j].textContent; break;
-						case "pubDate": date = article[j].textContent; break;
+						case "agShortDate": date = article[j].textContent; break;
 						case "link": url = article[j].textContent; break;
 						case "enclosure": image = article[j].getAttribute('url'); if(article[j].getAttribute('darkmode') == "true") { darkIsAvailable = true }; break;
 						case "description": description = article[j].textContent; break;
