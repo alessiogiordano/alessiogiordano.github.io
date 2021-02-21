@@ -1,34 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Blog by AG (EN)</title>
-  <language>en</language>
-  <link>https://www.alessiogiordano.net</link>
+  <link type="text/html" href="https://www.alessiogiordano.net/" rel="alternate"/>
+  <id>https://www.alessiogiordano.net/blog/en.xml</id>
   <icon>https://www.alessiogiordano.net/assets/profile/low.jpg</icon>
-  <description>The Alessio Giordano Blog</description>
+  <subtitle>The Alessio Giordano Blog</subtitle>
   <updated>2021-02-21T23:34:00+01:00</updated>
   
   <entry>
     <title>Tombola 2.0 Update</title>
-    <id>2</id>
     <category>Products</category>
+    <author><name>Alessio Giordano</name></author>
     <published>2020-12-28T00:02:00+01:00</published>
     <updated>2020-12-28T00:02:00+01:00</updated>
     <agShortDate>28/12/20</agShortDate>
-    <link>https://www.alessiogiordano.net/blog/tombola-2-update/en/index.html</link>
-    <enclosure url="https://www.alessiogiordano.net/blog/tombola-2-update/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
-    <description>Version 2.0 is now available with dozens of new features and compatibility with the latest OSs</description>
+    <agPicture url="https://www.alessiogiordano.net/blog/tombola-2-update/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
+    <id>https://www.alessiogiordano.net/blog/tombola-2-update/en/index.html</id>
+    <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/blog/tombola-2-update/en/index.html"/>
+    <summary>Version 2.0 is now available with dozens of new features and compatibility with the latest OSs</summary>
+    <content type="html">
+      <img alt="" src="https://www.alessiogiordano.net/blog/tombola-2-update/en/light-screenshot.jpg" />
+      <p>Tombola 2.0 is an all-new version of the application, available starting today on the <a href="https://apps.apple.com/app/id1508216655">App Store</a> for iPadOS and macOS.</p>
+		  <p>Here's a sneak peek at what's new:</p>
+			<ul>
+				<li>Full compatibility with iPadOS 14, macOS 11 Big Sur and the new Macs with Apple Silicon</li>
+				<li>The app is now entirely localized in English</li>
+				<li>The ability to view recent games in the Welcome page, and to generate a ticket to play on device without leaving the app</li>
+				<li>The game link now contains a meeting room on Skype Meet Now or Jitsi Meet together with the ticket</li>
+				<li>iCloud support allows you to store and sync your games across all your devices</li>
+				<li>Text-To-Speech functionality is more discrete and works with more languages</li>
+			</ul>
+			<p>Just as the previous version, Tombola 2.0 is completely free</p>
+    </content>
   </entry>
   
   <entry>
     <title>Introducing Tombola</title>
-    <id>1</id>
     <category>Products</category>
+    <author><name>Alessio Giordano</name></author>
     <published>2020-04-18T22:32:00+01:00</published>
     <updated>2020-04-18T22:32:00+01:00</updated>
     <agShortDate>18/04/20</agShortDate>
-    <link>https://www.alessiogiordano.net/blog/introducing-tombola/en/index.html</link>
-    <enclosure url="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
-    <description>A new iPadOS and macOS app for playing a game of Tombola via any video call service</description>
+    <agPicture url="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" type="image/jpg" darkmode="true" />
+    <id>https://www.alessiogiordano.net/blog/introducing-tombola/en/index.html</id>
+    <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/blog/introducing-tombola/en/index.html"/>
+    <summary>A new iPadOS and macOS app for playing a game of Tombola via any video call service</summary>
+    <content type="html">
+      <img alt="" src="https://www.alessiogiordano.net/blog/introducing-tombola/en/light-screenshot.jpg" />
+      <p>Today I release Tombola on the iPad and Mac App Stores.</p>
+		  <p>This application enables you to play a game of Tombola via screen sharing on Skype, Zoom and others. Just install the app and create a new game: via the "Invite" button you can share a url with other players that will distribute to them randomly-generated cards; this means you can play with as many people as you want.</p>
+		  <p>The app is completely free and it is available now. <a href="https://apps.apple.com/app/id1508216655">Download now</a></p>
+    </content>
   </entry>
   
 </feed>
