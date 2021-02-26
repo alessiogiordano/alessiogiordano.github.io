@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ColorMe.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>A2645D1FD76A75D438E0854D4825EFD4FEE2F86F</string>
+				<key>dateExpires</key>
+				<string>10/01/22</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>U32349C7PN.net.alessiogiordano.ShowMeTheColors</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>U32349C7PN</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>ColorMe.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c9d60f93-f4b6-4a69-9e91-be20b7c8e5d7</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: net.alessiogiordano.ShowMeTheColors</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>U32349C7PN</string>
+				<key>name</key>
+				<string>Alessio Giordano</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
