@@ -7,6 +7,14 @@
   <description>Gli Highlights della pagina iniziale di Alessio Giordano</description>
   
   <item>
+    <title>Vincitore della Swift Student Challenge</title>
+    <description>Ho ricevuto nella mattinata del 7 Giugno il premio (felpa, cappello e spille) della Swift Student Challenge</description>
+    <link>https://developer.apple.com/wwdc21/swift-student-challenge/</link>
+    <large url="wwdc21/it/banner-large.jpg" type="image/jpg" />
+    <small url="wwdc21/it/banner-small.jpg" type="image/jpg" />
+  </item>
+  
+  <item>
     <title>Aggiornamento 2.0 per Tombola</title>
     <description>Tombola 2.0 è ora disponibile per iPad and Mac</description>
     <link>/blog/tombola-2-update/it/</link>
