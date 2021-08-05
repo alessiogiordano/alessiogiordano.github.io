@@ -1,0 +1,51 @@
+<!DOCYPE html>
+<html>
+<head>
+	<title>Damiera - alessiogiordano.net</title>
+	<meta name="application-name" content="Damiera by AG" />
+	<meta name="author" content="Alessio Giordano" />
+	<meta name="description" content="Damiera by AG è un gioco di Dama realizzato in Unity sulla falsariga del gioco Scacchi preinstallato in Mac OS X" />
+	<meta charset="UTF-8" />
+	<!-- ------------------------------------ -->
+	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="/script.js"></script>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body id="AGnestedbody" onload="AGactivatehref(); AGinternationalize();">
+	<div id="AGbackdrop"></div>
+	<div id="AGbreadcrumbs">
+		<div id="AGlevel0" class="AGbreadcrumb AGactivatehref" data-href="/">
+			<div id="AGbreadpic"><img id="AGbreadpicimg" srcset="/assets/profile/max.jpg 2845w, /assets/profile/med.jpg 1423w, /assets/profile/low.jpg 712w, /assets/profile/ulow.jpg 256w" src="/assets/profile/ulow.jpg"  draggable="false"/></div>
+			<div class="AGbreadtitle">Alessio Giordano</div>
+		</div>
+		<div id="AGlevel1" class="AGbreadcrumb AGactivatehref" data-href="/products/">
+			<div class="AGbreadarrow">►</div>
+			<div class="AGbreadtitle">Prodotti</div>
+		</div>
+		<div id="AGlevel2" class="AGbreadcrumb AGactivatehref" data-href="javascript:window.location.reload()">
+			<div class="AGbreadarrow">►</div>
+			<div class="AGbreadtitle">Damiera</div>
+		</div>
+	</div>
+	<div id="AGpageshadow"></div>
+	<div id="AGpage">
+		<canvas id="unity-canvas" width=960 height=600 style="width: 100%; height: 100%; background: url('Build/Damiera Seed 6 (WebGL).jpg') center / cover"></canvas>
+        <script src="Build/Damiera Seed 6 (WebGL).loader.js"></script>
+        <script>
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: "Build/Damiera Seed 6 (WebGL).data",
+            frameworkUrl: "Build/Damiera Seed 6 (WebGL).framework.js",
+            codeUrl: "Build/Damiera Seed 6 (WebGL).wasm",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Alessio Giordano",
+            productName: "Damiera",
+            productVersion: "0.9",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        });
+        </script>
+	</div>
+</body>
+</html>
