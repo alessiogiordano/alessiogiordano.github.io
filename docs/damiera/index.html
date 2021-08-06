@@ -46,6 +46,13 @@
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         });
         </script>
+	<style>
+	@-moz-document url-prefix() {
+		canvas {
+			height: calc(100vh - 3em)!important;
+		}
+	}
+	</style>
 	</div>
 </body>
 </html>
