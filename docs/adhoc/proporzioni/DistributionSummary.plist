@@ -12,9 +12,9 @@
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
-				<string>A2645D1FD76A75D438E0854D4825EFD4FEE2F86F</string>
+				<string>EA53B10B32E32E8370AB5BF273D74AADC64B785B</string>
 				<key>dateExpires</key>
-				<string>10/01/22</string>
+				<string>18/09/22</string>
 				<key>type</key>
 				<string>Apple Distribution</string>
 			</dict>
@@ -36,7 +36,7 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>d7285c09-5dd9-49ba-8561-31bd20dfc663</string>
+				<string>f86f7481-f85f-4f8f-9df7-1dea06f526f6</string>
 				<key>name</key>
 				<string>iOS Team Ad Hoc Provisioning Profile: net.alessiogiordano.personal.Proporzioni</string>
 			</dict>
