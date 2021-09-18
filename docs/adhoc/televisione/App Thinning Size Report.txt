@@ -1,0 +1,36 @@
+
+App Thinning Size Report for All Variants of Televisore (iOS)
+
+Variant: Televisore-29BC6220-E901-47B9-A9CA-FA6F32E76F0A.ipa
+Supported variant descriptors: [device: iPhone9,3, os-version: 14.0], [device: iPhone12,8, os-version: 14.0], [device: iPhone8,4, os-version: 14.0], [device: iPhone9,1, os-version: 14.0], [device: iPod9,1, os-version: 14.0], [device: iPhone10,4, os-version: 14.0], [device: iPhone10,1, os-version: 14.0], and [device: iPhone8,1, os-version: 14.0]
+App + On Demand Resources size: 288 KB compressed, 587 KB uncompressed
+App size: 288 KB compressed, 587 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Televisore-7DEEEB39-9691-428F-A717-BDE7703B2D2A.ipa
+Supported variant descriptors: [device: iPad6,3, os-version: 14.0], [device: iPad13,4, os-version: 14.0], [device: iPad13,7, os-version: 14.0], [device: iPad6,12, os-version: 14.0], [device: iPad8,10, os-version: 14.0], [device: iPad7,4, os-version: 14.0], [device: iPad13,5, os-version: 14.0], [device: iPad13,6, os-version: 14.0], [device: iPad6,4, os-version: 14.0], [device: iPad6,11, os-version: 14.0], [device: iPad13,10, os-version: 14.0], [device: iPad8,5, os-version: 14.0], [device: iPad8,4, os-version: 14.0], [device: iPad11,4, os-version: 14.0], [device: iPad8,1, os-version: 14.0], [device: iPad8,2, os-version: 14.0], [device: iPad13,2, os-version: 14.0], [device: iPad13,11, os-version: 14.0], [device: iPad8,6, os-version: 14.0], [device: iPad5,3, os-version: 14.0], [device: iPad7,11, os-version: 14.0], [device: iPad7,1, os-version: 14.0], [device: iPad7,5, os-version: 14.0], [device: iPad8,3, os-version: 14.0], [device: iPad11,6, os-version: 14.0], [device: iPad7,12, os-version: 14.0], [device: iPad6,7, os-version: 14.0], [device: iPad7,3, os-version: 14.0], [device: iPad11,3, os-version: 14.0], [device: iPad8,9, os-version: 14.0], [device: iPad6,8, os-version: 14.0], [device: iPad11,7, os-version: 14.0], [device: iPad8,8, os-version: 14.0], [device: iPad8,11, os-version: 14.0], [device: iPad5,2, os-version: 14.0], [device: iPad11,1, os-version: 14.0], [device: iPad13,1, os-version: 14.0], [device: iPad13,9, os-version: 14.0], [device: iPad8,12, os-version: 14.0], [device: iPad7,6, os-version: 14.0], [device: iPad5,1, os-version: 14.0], [device: iPad8,7, os-version: 14.0], [device: iPad11,2, os-version: 14.0], [device: iPad5,4, os-version: 14.0], [device: iPad7,2, os-version: 14.0], [device: MacFamily20,1, os-version: 14.0], and [device: iPad13,8, os-version: 14.0]
+App + On Demand Resources size: 304 KB compressed, 605 KB uncompressed
+App size: 304 KB compressed, 605 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Televisore-F30A7585-D29D-4013-9AB6-F4051964FB99.ipa
+Supported variant descriptors: [device: iPhone9,2, os-version: 14.0], [device: iPhone12,3, os-version: 14.0], [device: iPhone10,6, os-version: 14.0], [device: iPhone13,1, os-version: 14.0], [device: iPhone8,2, os-version: 14.0], [device: iPhone10,3, os-version: 14.0], [device: iPhone11,2, os-version: 14.0], [device: iPhone10,5, os-version: 14.0], [device: iPhone10,2, os-version: 14.0], [device: iPhone13,3, os-version: 14.0], [device: iPhone11,6, os-version: 14.0], [device: iPhone13,4, os-version: 14.0], [device: iPhone9,4, os-version: 14.0], [device: iPhone11,4, os-version: 14.0], [device: iPhone13,2, os-version: 14.0], and [device: iPhone12,5, os-version: 14.0]
+App + On Demand Resources size: 305 KB compressed, 604 KB uncompressed
+App size: 305 KB compressed, 604 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Televisore-FA52876C-597D-4D6A-B307-8CCF63FB9956.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 14.0] and [device: iPhone12,1, os-version: 14.0]
+App + On Demand Resources size: 302 KB compressed, 601 KB uncompressed
+App size: 302 KB compressed, 601 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Televisore.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 1,2 MB compressed, 1,5 MB uncompressed
+App size: 1,2 MB compressed, 1,5 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
