@@ -1,0 +1,36 @@
+
+App Thinning Size Report for All Variants of SaneTube
+
+Variant: SaneTube-A9358C28-BDEF-4204-9A5E-4F89AA0B7DA8.ipa
+Supported variant descriptors: [device: iPhone12,3, os-version: 14.0], [device: iPhone11,4, os-version: 14.0], [device: iPhone10,6, os-version: 14.0], [device: iPhone13,1, os-version: 14.0], [device: iPhone11,6, os-version: 14.0], [device: iPhone12,5, os-version: 14.0], [device: iPhone8,2, os-version: 14.0], [device: iPhone13,2, os-version: 14.0], [device: iPhone10,2, os-version: 14.0], [device: iPhone13,4, os-version: 14.0], [device: iPhone11,2, os-version: 14.0], [device: iPhone10,3, os-version: 14.0], [device: iPhone9,2, os-version: 14.0], [device: iPhone10,5, os-version: 14.0], [device: iPhone13,3, os-version: 14.0], and [device: iPhone9,4, os-version: 14.0]
+App + On Demand Resources size: 614 KB compressed, 1,3 MB uncompressed
+App size: 614 KB compressed, 1,3 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: SaneTube-BFD47C0B-5905-4162-BB98-4D145970F6DD.ipa
+Supported variant descriptors: [device: iPod9,1, os-version: 14.0], [device: iPhone9,1, os-version: 14.0], [device: iPhone9,3, os-version: 14.0], [device: iPhone10,4, os-version: 14.0], [device: iPhone8,1, os-version: 14.0], [device: iPhone12,8, os-version: 14.0], [device: iPhone10,1, os-version: 14.0], and [device: iPhone8,4, os-version: 14.0]
+App + On Demand Resources size: 564 KB compressed, 1,3 MB uncompressed
+App size: 564 KB compressed, 1,3 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: SaneTube-CF22EE98-0687-477D-A4A9-7848ABC6EA9F.ipa
+Supported variant descriptors: [device: iPad11,3, os-version: 14.0], [device: iPad8,11, os-version: 14.0], [device: iPad7,1, os-version: 14.0], [device: iPad8,6, os-version: 14.0], [device: iPad7,11, os-version: 14.0], [device: iPad11,4, os-version: 14.0], [device: iPad7,4, os-version: 14.0], [device: iPad6,4, os-version: 14.0], [device: iPad5,1, os-version: 14.0], [device: iPad6,8, os-version: 14.0], [device: iPad8,3, os-version: 14.0], [device: iPad8,9, os-version: 14.0], [device: iPad5,4, os-version: 14.0], [device: iPad8,12, os-version: 14.0], [device: iPad11,1, os-version: 14.0], [device: iPad8,1, os-version: 14.0], [device: iPad11,2, os-version: 14.0], [device: iPad7,6, os-version: 14.0], [device: iPad13,1, os-version: 14.0], [device: iPad13,11, os-version: 14.0], [device: iPad13,4, os-version: 14.0], [device: iPad11,7, os-version: 14.0], [device: iPad5,3, os-version: 14.0], [device: iPad8,8, os-version: 14.0], [device: iPad7,5, os-version: 14.0], [device: iPad6,7, os-version: 14.0], [device: iPad7,3, os-version: 14.0], [device: iPad13,8, os-version: 14.0], [device: iPad8,7, os-version: 14.0], [device: iPad6,3, os-version: 14.0], [device: iPad13,9, os-version: 14.0], [device: iPad8,2, os-version: 14.0], [device: iPad8,5, os-version: 14.0], [device: iPad13,10, os-version: 14.0], [device: iPad13,7, os-version: 14.0], [device: iPad13,6, os-version: 14.0], [device: iPad6,12, os-version: 14.0], [device: iPad7,12, os-version: 14.0], [device: iPad11,6, os-version: 14.0], [device: iPad8,4, os-version: 14.0], [device: iPad13,5, os-version: 14.0], [device: iPad7,2, os-version: 14.0], [device: iPad5,2, os-version: 14.0], [device: iPad6,11, os-version: 14.0], [device: MacFamily20,1, os-version: 14.0], [device: iPad13,2, os-version: 14.0], and [device: iPad8,10, os-version: 14.0]
+App + On Demand Resources size: 617 KB compressed, 1,3 MB uncompressed
+App size: 617 KB compressed, 1,3 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: SaneTube-D5DF37C4-286F-48F8-AC95-A19F55E65FA3.ipa
+Supported variant descriptors: [device: iPhone12,1, os-version: 14.0] and [device: iPhone11,8, os-version: 14.0]
+App + On Demand Resources size: 613 KB compressed, 1,3 MB uncompressed
+App size: 613 KB compressed, 1,3 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: SaneTube.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 1,7 MB compressed, 2,5 MB uncompressed
+App size: 1,7 MB compressed, 2,5 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

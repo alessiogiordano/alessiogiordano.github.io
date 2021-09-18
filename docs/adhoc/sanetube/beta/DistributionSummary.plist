@@ -12,9 +12,9 @@
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
-				<string>A2645D1FD76A75D438E0854D4825EFD4FEE2F86F</string>
+				<string>EA53B10B32E32E8370AB5BF273D74AADC64B785B</string>
 				<key>dateExpires</key>
-				<string>10/01/22</string>
+				<string>18/09/22</string>
 				<key>type</key>
 				<string>Apple Distribution</string>
 			</dict>
@@ -25,7 +25,7 @@
 				<key>aps-environment</key>
 				<string>production</string>
 				<key>com.apple.developer.icloud-container-environment</key>
-				<string>Development</string>
+				<string>Production</string>
 				<key>com.apple.developer.icloud-container-identifiers</key>
 				<array>
 					<string>iCloud.net.alessiogiordano.personal.SaneTube</string>
@@ -44,7 +44,7 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>48a5968f-cf6a-4cd0-a967-efc243e01a2c</string>
+				<string>ac6203d9-b868-47c2-abd7-bd6c716047d1</string>
 				<key>name</key>
 				<string>iOS Team Ad Hoc Provisioning Profile: net.alessiogiordano.personal.SaneTube</string>
 			</dict>
