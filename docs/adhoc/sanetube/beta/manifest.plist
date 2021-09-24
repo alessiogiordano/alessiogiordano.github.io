@@ -11,7 +11,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/app.ipa</string>
+					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/SaneTube.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -47,7 +47,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/app-CF22EE98-0687-477D-A4A9-7848ABC6EA9F.ipa</string>
+					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/SaneTube-CF22EE98-0687-477D-A4A9-7848ABC6EA9F.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -390,7 +390,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/app-BFD47C0B-5905-4162-BB98-4D145970F6DD.ipa</string>
+					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/SaneTube-BFD47C0B-5905-4162-BB98-4D145970F6DD.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -460,7 +460,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/app-A9358C28-BDEF-4204-9A5E-4F89AA0B7DA8.ipa</string>
+					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/SaneTube-A9358C28-BDEF-4204-9A5E-4F89AA0B7DA8.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
@@ -586,7 +586,7 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/app-D5DF37C4-286F-48F8-AC95-A19F55E65FA3.ipa</string>
+					<string>https://www.alessiogiordano.net/adhoc/sanetube/beta/SaneTube-D5DF37C4-286F-48F8-AC95-A19F55E65FA3.ipa</string>
 					<key>variantDescriptors</key>
 					<array>
 						<dict>
