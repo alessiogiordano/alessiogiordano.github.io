@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Replaced title -->
+        <title>Melina 70 DV - alessiogiordano.net</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="animate.css">
+        <script src="script.js"></script>
+        <script src="jquery.js"></script>
+        <script src="gapless5.js"></script>
+        <script src="range-touch.min.js"></script>
+        <script src="CSS.supports.js"></script>
+        <!-- Custom theme -->
+        <style>
+            #wallpaper {
+                background: url("polena.jpg") no-repeat center/cover;
+            }
+            .big-title {
+                text-align: center;
+                font-family: Roundhand, cursive;
+            }
+        </style>
+        <!-- ------------ -->
+    </head>
+    <body onload="Start(); AutoAudio();">
+        <noscript>
+            <div>Abilita Javascript</div>
+        </noscript>
+        <div id="closemenu" onclick="CloseShareMenu()"></div>
+        <div id="wallpaper"></div>
+        <header>
+            <div class="header-container" id="home-header">
+                <div title="Attiva / Disattiva sottofondo musicale" class="h-button" onclick="SwitchVolume()" id="h-volume1"></div>
+                <div class="h-title">home</div>
+                <div title="Ricarica la pagina" class="h-button" onclick="Reload()" id="h-reload"></div>
+            </div>
+            <div class="header-container" id="folder-header" style="display:none">
+                <div title="Indietro" class="h-button" onclick="Back()" id="h-back"></div>
+                <div class="h-title" id="fh-title">Selezione scene</div>
+                <div title="Attiva / Disattiva sottofondo musicale" class="h-button" onclick="SwitchVolume()" id="h-volume2"></div>
+            </div>
+        </header>
+        <div id="container" onclick="CloseShareMenu()">
+            <div id="home">
+                <div class="center-body">
+                    <div class="cb-left">
+                        <!-- Replaced title -->
+                        <div class="big-title margin-bot">Melina<br>70</div>
+                    </div>
+                    <div class="cb-right">
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1')">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div class="el-title">Guarda<span class="largeonly"> filmino</span> dall'inizio</div>
+                        </div>
+                        <div class="play-element" onclick="OpenFolder('scene')">
+                            <img class="folder-prev" src="folder.svg" />
+                            <div class="el-title">Selezione scene</div>
+                        </div>
+                        <div class="play-element" onclick="OpenFolder('extra')">
+                            <img class="folder-prev" src="folder.svg" />
+                            <div class="el-title">Extra</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="folder-scene" class="folder-container">
+                <div class="folder-body">
+                    <div class="folder-block">
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 24)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">L'arrivo del "fiore"</div><div>Vai a 00:24</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 40)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">Il pranzo è servito</div><div>Vai a 00:40</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 56)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">I bambini giocano</div><div>Vai a 00:56</div></div>
+                        </div>
+                    </div>
+                    <div class="folder-block">
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 99)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">In posa per le fotografie</div><div>Vai a 01:39</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 112)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">La firma del biglietto</div><div>Vai a 01:52</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 132)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">La torta "esplosiva"</div><div>Vai a 02:12</div></div>
+                        </div>
+                    </div>
+                    <div class="folder-block">
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 208)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">La lettura del biglietto</div><div>Vai a 03:28</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 229)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">La poltrona "comoda"</div><div>Vai a 03:49</div></div>
+                        </div>
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 269)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">L'albero della vita</div><div>Vai a 04:29</div></div>
+                        </div>
+                    </div>
+                    <div class="folder-block">
+                        <div class="play-element" onclick="WatchVideo('https://www.dropbox.com/s/wtgbndxlnuyo142/720p.mp4?raw=1','https://www.dropbox.com/s/49mp3bggrv98j1e/540p.mp4?raw=1', 305)">
+                            <div class="video-prev"><img src="play.svg"></div>
+                            <div><div class="el-title">I saluti</div><div>Vai a 05:05</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="folder-extra" class="folder-container">
+                <div class="folder-body">
+                    <div class="folder-block">
+                        <div class="play-element" onclick="Download('https://www.dropbox.com/s/tq9eby1eq2jt920/1080p.mp4?raw=1')">
+                            <div class="video-prev"><img src="download.svg"></div>
+                            <div><div class="el-title">Scarica in Full HD</div><div>795,74MB - Con Sottofondo Musicale</div></div>
+                        </div>
+                        <div class="play-element" onclick="Download('https://www.dropbox.com/s/af0x5jbraixrv4w/1080p-sans.mp4?raw=1')">
+                            <div class="video-prev"><img src="download.svg"></div>
+                            <div><div class="el-title">Scarica in Full HD</div><div>793,65MB - Senza Sottofondo Musicale</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="player">
+            <div id="fallback-controls"></div>
+            <div id="back-gradient" class="firstload"></div>
+            <div id="loader" class="sk-fading-circle"><div class="sk-circle1 sk-circle"></div><div class="sk-circle2 sk-circle"></div><div class="sk-circle3 sk-circle"></div><div class="sk-circle4 sk-circle"></div><div class="sk-circle5 sk-circle"></div><div class="sk-circle6 sk-circle"></div><div class="sk-circle7 sk-circle"></div><div class="sk-circle8 sk-circle"></div><div class="sk-circle9 sk-circle"></div><div class="sk-circle10 sk-circle"></div><div class="sk-circle11 sk-circle"></div><div class="sk-circle12 sk-circle"></div></div>
+            <video id="video" webkit-playsinline="true" playsinline="true" onloadedmetadata="AfterWV()" ontimeupdate="UpdateTime()" ondurationchange="UpdateDuration()" onwaiting="CannotPlay()" oncanplaythrough="CanPlay()" onseeking="CannotPlay()" onseeked="CanPlay()" onplaying="Playing()" onpause="Paused()" onended="Paused()"></video>
+            <div id="video-controls" class="firstload">
+                <div id="top-controls">
+                    <div title="Indietro" class="h-button" onclick="ExitPlay()" ontouchstart="Stopp(event)" id="h-backVideo"></div>
+                    <div id="real-time" class="video-time"><div id="time-passed">00:00:15</div>&nbsp;/&nbsp;<div id="total-time">00:07:56</div></div>
+                    <div id="scrub-time" class="video-time"><div id="scrub-passed">00:00:15</div>&nbsp;/&nbsp;<div id="total-scrub">00:07:56</div></div>
+                </div>
+                <div id="touchstart" style="position: fixed;width: 100vw;height: 100vh;left: 0;right: 0;top: 0;bottom: 0;margin: auto;z-index: 0;"></div>
+                <div id="bottom-controls">
+                    <div id="bc-top" ontouchstart="Stopp(event)"><div id="buffered"></div><div id="played"></div><input id="scrub" ontouchstart="OnScrubDown()" ontouchend="OnScrubUp()" onmousedown="OnScrubDown()" onmouseup="OnScrubUp()" oninput="OnScrubInput()" type="range" step="0.001" min="0" max="100" value="0"></div>
+                    <div id="bc-bottom"><div id="def-controls"><div id="h-hd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">HD</div><div class="hhs2">SD</div></div><div id="h-sd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">SD</div><div class="hhs2">HD</div></div></div><div style="display: flex"><div title="Indietro di 30 Secondi" class="h-button" onclick="Prev()" ontouchstart="Stopp(event)" id="h-prev"></div><div title="Riproduci" class="h-button" onclick="Play(null, true)" ontouchstart="Stopp(event)" id="h-play" style="display: block;"></div><div title="Pausa" class="h-button" onclick="Pause(null, true)" ontouchstart="Stopp(event)" id="h-pause" style="display: none;"></div><div title="Avanti di 30 secondi" class="h-button" onclick="Next()" ontouchstart="Stopp(event)" id="h-next"></div></div><div style="font-size: 0.9em;display: flex;justify-content: space-between;width: 65px;"><div title="Scarica" class="h-button" onclick="Download()" ontouchstart="Stopp(event)" id="h-backVideo" style="background-image: url(&quot;download.svg&quot;); height: 1.8em;"></div><div title="Attiva schermo intero" class="h-button" onclick="FullOn()" ontouchstart="Stopp(event)" id="h-fullIn"></div></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="garbage" style="display: none"></div>
+        <a id="a" download href="" style="display: none"></a>
+        <!-- Replaced background with custom Jingle -->
+        <audio id="background" controls><source src="jingle.mp3" type="audio/mpeg"></audio>
+        <footer>
+          <div id="footer-container">
+              <div id="sh-menu" onclick="CloseShareMenu()">
+                  <a title="Condividi su Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="facebook.svg" /><div>Facebook</div></div></a>
+                  <!-- Updated Twitter API from /home?status= to intent/tweet?= -->
+                  <a title="Condividi su Twitter" target="_blank" href="https://twitter.com/intent/tweet?text=Guarda%20Melina%2070%20da%20questo%20link%3A%20https%3A//www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="twitter.svg" /><div>Twitter</div></div></a>
+                  <!-- Removed Google+ Sharing as it was shut down since 2016 -->
+                  <a title="Condividi su Whatsapp" target="_blank" href="whatsapp://send?text=Guarda Melina 70 da questo link: https://www.alessiogiordano.net/melina70/" data-action="share/whatsapp/share" ><div class="sm-choice"><img src="whatsapp.svg" /><div>Whatsapp</div></div></a>
+                  <a title="Condividi via Mail" id="shareNewsA" href="mailto:?&amp;subject=Guarda Melina 70&amp;body=Guarda Melina 70 da questo link: https://www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="mail.svg" /><div>Mail</div></div></a>
+              </div>
+              <div id="sh-button" onclick="OpenShareMenu()"><img src="share.svg"><div id="s-text">condividi</div></div>
+              <a title="Torna alla homepage del sito" target="_blank" href="https://www.alessiogiordano.net/"><div id="logo">© <span class="largeonly">2016-</span>2021 Alessio Giordano</div></a>
+              <!-- Removed 'ilmovnino.tk' logo as I am reusing this code for a personal project -->
+        </div>
+        </footer>
+    </body>
+</html>
