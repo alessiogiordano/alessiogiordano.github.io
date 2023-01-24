@@ -14,7 +14,7 @@ function AGita() {
 		document.querySelector("#AGtwo .AGlabel").innerText = "Blog";
 		document.querySelector("#AGthree .AGlabel").innerText = "Contatti";
 		document.getElementById("AGtemp").innerText = "Carico le previsioni...";
-		document.getElementById("AGcopy").innerText = "© 2020 Alessio Giordano - Tutte le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
+		document.querySelector("#AGcopy span").innerText = "Tutte le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
 	} else if(document.querySelectorAll("#AGsubscribe").length != 0) {
 		// Blog
 		document.querySelector("#AGsubscribe").innerText = "Iscriviti al feed RSS";
