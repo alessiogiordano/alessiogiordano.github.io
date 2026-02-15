@@ -12,6 +12,7 @@ var busy = false;
 var doyes = true;
 var mouseover = true;
 var scrubbing = false;
+var shouldResetScrollPosition = false;
 function SetKeyUp() {
   document.body.onkeyup = function(e){
     if(e.keyCode == 32){
@@ -45,7 +46,8 @@ function HashFunction(first) {
         $("body").removeClass("playing-body");
         Ended();
         $("#player").fadeOut(150);
-        if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('volume-up.svg')"); $("#h-volume2").css("background-image", "url('volume-up.svg')"); intentionallyOn = false; };
+        if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('glyph/volume-up.svg')"); $("#h-volume2").css("background-image", "url('glyph/volume-up.svg')"); intentionallyOn = false; };
+        shouldResetScrollPosition = true;
     } else if (location.hash == "#scene") {
         $("header").css("display", "flex");
         $("#folder-header").css("display", "flex");
@@ -55,13 +57,25 @@ function HashFunction(first) {
         $("body").removeClass("playing-body");
         Ended();
         $("#player").fadeOut(150);
-        if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('volume-up.svg')"); $("#h-volume2").css("background-image", "url('volume-up.svg')"); intentionallyOn = false; };
+        if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('glyph/volume-up.svg')"); $("#h-volume2").css("background-image", "url('glyph/volume-up.svg')"); intentionallyOn = false; };
+        //
+        if (shouldResetScrollPosition) {
+            window.setTimeout(() => {
+                document.querySelector("#folder-scene .folder-body").scrollTo({ left: 0, behavior: 'smooth' })
+            }, 10);
+        }
     } else if (location.hash == "#extra") {
         $("header").css("display", "flex");
         $("#folder-header").css("display", "flex");
         document.getElementById("fh-title").innerText = "Extra";
         $("#folder-extra").css("display", "flex");
         $("footer").css("display", "flex");
+        //
+        if (shouldResetScrollPosition) {
+            window.setTimeout(() => {
+                document.querySelector("#folder-extra .folder-body").scrollTo({ left: 0, behavior: 'smooth' })
+            }, 10);
+        }
     } else if (location.hash.slice(0,6) == "#watch") {
         if(!first) { window.history.go(-1) };
     } else {
@@ -96,7 +110,7 @@ function Start() {
     $("#video-controls").removeClass("firstload"); $("#back-gradient").removeClass("firstload");
     try { SetKeyUp() } catch(e) {};
     console.log("%cAG%c Digital Video", "color:black;font-size:5em;font-weight:bolder;font-family:NinoFont, Arial, sans-serif;opacity:0.7", "color:black;font-size:5em;font-weight:lighter;font-family:NinoFont, Arial, sans-serif;opacity:0.7");
-    console.log("%c© 2016-2021 Alessio Giordano", "color:black;font-size:2em;font-weight:lighter;font-family:NinoFont, Arial, sans-serif;opacity:0.7");
+    console.log("%c© 2016-2026 Alessio Giordano", "color:black;font-size:2em;font-weight:lighter;font-family:NinoFont, Arial, sans-serif;opacity:0.7");
     console.log("%cAttenzione! Questa è una funzionalità per sviluppatori, per qualsiasi problema o richiesta rivolgiti all'amministratore del sito", "font-size:1.8em;font-weight:bolder;color:darkred;font-family:NinoFont, Arial, sans-serif;opacity:0.7");
     var testify = false; try { if(CSS) { testify = !CSS.supports('display', 'flex') } } catch(e) {};
     if (testify) {
@@ -127,8 +141,14 @@ function Start() {
         document.getElementById("player").addEventListener("mouseleave", function(event){ HideControls(); mouseover = false; });
     };
     if(isIE()) {
-        document.getElementById("footer-container").innerHTML = '<div id="sh-button" onclick="OpenShareMenu()"><img src="share.svg"><div id="s-text">condividi</div></div><div id="sh-menu" onclick="CloseShareMenu()"><a title="Condividi su Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="facebook.svg" /><div>Facebook</div></div></a><a title="Condividi su Twitter" target="_blank" href="https://twitter.com/home?status=Guarda%20Melina%2070%20%20da%20questo%20link%3A%20https%3A//www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="twitter.svg" /><div>Twitter</div></div></a><a title="Condividi su Whatsapp" target="_blank" href="whatsapp://send?text=Guarda Melina 70 da questo link: https://www.alessiogiordano.net/melina70/" data-action="share/whatsapp/share"><div class="sm-choice"><img src="whatsapp.svg" /><div>Whatsapp</div></div></a><a title="Condividi via Mail" id="shareNewsA" href="mailto:?&amp;subject=Guarda Melina 70&amp;body=Guarda Melina 70 da questo link: https://www.alessiogiordano.net/melina70/"><div class="sm-choice"><img src="mail.svg" /><div>Mail</div></div></a></div><a title="Sviluppato con tecnologia ilmovnino.tk DV" target="_blank" href="https://www.alessiogiordano.net/"><div id="logo">© 2021 Alessio Giordano</div></a>';
-        document.getElementById("sh-menu").className = "sm-ie";
+        /* document.getElementById("footer-container").innerHTML = '<div id="share-container" onclick="OpenShareMenu()"><img src="share.svg"><div id="s-text">condividi</div></div><div id="share-menu" onclick="CloseShareMenu()"><a title="Condividi su Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.ilmovnino.tk/scecilia/index.html"><div class="sm-choice"><img src="facebook.svg" /><div>Facebook</div></div></a><a title="Condividi su Twitter" target="_blank" href="https://twitter.com/home?status=Guarda%20Sales%20Festival%20Night%20da%20questo%20link%3A%20http%3A//www.ilmovnino.tk/scecilia/index.html"><div class="sm-choice"><img src="twitter.svg" /><div>Twitter</div></div></a><a title="Condividi su Google+" target="_blank" href="https://plus.google.com/share?url=http%3A//www.ilmovnino.tk/scecilia/index.html"><div class="sm-choice"><img src="google+.svg" /><div>Google+</div></div></a><a title="Condividi su Whatsapp" id="toremifnotm" target="_blank" href="whatsapp://send?text=Guarda Sales Festival Night da questo link: http://www.ilmovnino.tk/scecilia/index.html" data-action="share/whatsapp/share" id="toremifnotm"><div class="sm-choice"><img src="whatsapp.svg" /><div>Whatsapp</div></div></a><a title="Condividi via Mail" id="shareNewsA" href="mailto:?&amp;subject=Guarda Sales Festival Night&amp;body=Guarda Sales Festival Night da questo link: http://www.ilmovnino.tk/scecilia/index.html"><div class="sm-choice"><img src="mail.svg" /><div>Mail</div></div></a></div><a title="ilmovnino.tk &egrave; lo spazio web del 5 Scientifico dove condividere, comunicare, informarsi" target="_blank" href="http://www.ilmovnino.tk/" style="font-size: 2em"><div id="logo">il<span style="font-weight:bolder">mov</span>nino<span style="font-weight:bolder">.tk</span></div></a>'; */
+        // Removed hard coded replacement
+        let outerHTML = document.getElementById("sh-button").outerHTML;
+        let parent = document.getElementById("sh-button").parentElement;
+        document.getElementById("sh-button").remove();
+        parent.innerHTML = outerHTML + parent.innerHTML;
+        //
+        document.getElementById("share-menu").className = "sm-ie";
     };
     document.addEventListener("mozfullscreenchange", function( event ) {
         if ( document.mozFullScreen ) {
@@ -150,7 +170,7 @@ function GetFallback() {
     $("#video").css("height", "-webkit-calc(95vh - 4em)");
     $("#video").css("height", "calc(95vh - 4em)");
     document.getElementById("video").setAttribute("controls", "");
-    document.getElementById("fallback-controls").innerHTML = '<div title="Indietro" class="h-button" onclick="ExitPlay()" ontouchstart="Stopp(event)" id="h-backVideo"></div><div id="def-controls" style="width: auto;"><div id="h-hd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">HD</div><div class="hhs2">SD</div></div><div id="h-sd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">SD</div><div class="hhs2">HD</div></div></div><div title="Scarica" class="h-button" onclick="Download()" ontouchstart="Stopp(event)" id="h-backVideo" style="background-image: url(download.svg);"></div>';
+    document.getElementById("fallback-controls").innerHTML = '<div title="Indietro" class="h-button" onclick="ExitPlay()" ontouchstart="Stopp(event)" id="h-backVideo"></div><div id="def-controls" style="width: auto;"><div id="h-hd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">HD</div><div class="hhs2">SD</div></div><div id="h-sd" onclick="SwitchDef()" ontouchstart="Stopp(event)" style="display: none;"><div class="hhs1">SD</div><div class="hhs2">HD</div></div></div><div title="Scarica" class="h-button" onclick="Download()" ontouchstart="Stopp(event)" id="h-backVideo" style="background-image: url(glyph/download.svg);"></div>';
 };
 function Download(url) {
     var src = url ?? document.getElementById("video").src;
@@ -164,7 +184,10 @@ function Download(url) {
 };
 function OpenShareMenu() {
     if ('share' in navigator) {
-        navigator.share({title: "Melina 70", text: "Guarda Melina 70 da questo link: https://www.alessiogiordano.net/melina70/", link: "https://www.alessiogiordano.net/melina70/"});
+        const title = document.querySelector('meta[name="share-title"]')?.content ?? document.title;
+        const link = document.querySelector('meta[name="share-title"]')?.content ?? window.location.origin + window.location.pathname;
+        const text = document.querySelector('meta[name="share-text"]')?.content ?? "Guarda da questo link: " + link;
+        navigator.share({title: title, text: text, link: link});
     } else {
         if(!menuOpened) {
             $("#sh-menu").fadeToggle(50);
@@ -188,30 +211,30 @@ function AutoAudio() {
     if (test !== undefined) {
         promise.then(_ => {
             // Background music started
-            $("#h-volume1").css("background-image", "url('volume-up.svg')");
-            $("#h-volume2").css("background-image", "url('volume-up.svg')");
+            $("#h-volume1").css("background-image", "url('glyph/volume-up.svg')");
+            $("#h-volume2").css("background-image", "url('glyph/volume-up.svg')");
         }).catch(error => {
             // Autoplay was blocked
             player.stop();
-            $("#h-volume1").css("background-image", "url('volume-off.svg')");
-            $("#h-volume2").css("background-image", "url('volume-off.svg')");
+            $("#h-volume1").css("background-image", "url('glyph/volume-off.svg')");
+            $("#h-volume2").css("background-image", "url('glyph/volume-off.svg')");
         });
     } else {
         // Autoplay failed
         player.stop();
-        $("#h-volume1").css("background-image", "url('volume-off.svg')");
-        $("#h-volume2").css("background-image", "url('volume-off.svg')");
+        $("#h-volume1").css("background-image", "url('glyph/volume-off.svg')");
+        $("#h-volume2").css("background-image", "url('glyph/volume-off.svg')");
     };
 };
 function SwitchVolume() {
     if (player.isPlaying()) {
         player.stop();
-        $("#h-volume1").css("background-image", "url('volume-off.svg')");
-        $("#h-volume2").css("background-image", "url('volume-off.svg')");
+        $("#h-volume1").css("background-image", "url('glyph/volume-off.svg')");
+        $("#h-volume2").css("background-image", "url('glyph/volume-off.svg')");
     } else {
         player.play();
-        $("#h-volume1").css("background-image", "url('volume-up.svg')");
-        $("#h-volume2").css("background-image", "url('volume-up.svg')");
+        $("#h-volume1").css("background-image", "url('glyph/volume-up.svg')");
+        $("#h-volume2").css("background-image", "url('glyph/volume-up.svg')");
     };
 };
 function Reload() {
@@ -235,7 +258,7 @@ function ExitPlay() {
     $("body").removeClass("playing-body");
     Ended();
     $("#player").fadeToggle(150);
-    if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('volume-up.svg')"); $("#h-volume2").css("background-image", "url('volume-up.svg')"); intentionallyOn = false; };
+    if (intentionallyOn) { player.play(); $("#h-volume1").css("background-image", "url('glyph/volume-up.svg')"); $("#h-volume2").css("background-image", "url('glyph/volume-up.svg')"); intentionallyOn = false; };
     window.history.go(-1);
 };
 function SwitchDef() { if(!isHidden(document.getElementById("video-controls"))) {
@@ -271,6 +294,7 @@ function SwitchDef() { if(!isHidden(document.getElementById("video-controls"))) 
 }};
 function WatchVideo(hdef,sdef, where) {
     history.pushState(null, "ilmovnino.tk Player", "#watch");
+    shouldResetScrollPosition = false; // Preserve position in folder
     ShowControls();
     Paused();
     if (player.isPlaying()) { SwitchVolume(); intentionallyOn = true; };

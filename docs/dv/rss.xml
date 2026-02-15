@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="it">
+  <title>Digital Video by AG</title>
+  <link type="text/html" href="https://www.alessiogiordano.net/" rel="alternate"/>
+  <id>https://www.alessiogiordano.net/dv/rss.xml</id>
+  <icon>https://www.alessiogiordano.net/assets/profile/low.jpg</icon>
+  <subtitle>Digital Video - Alessio Giordano</subtitle>
+  <updated>2023-12-29T00:00:00+01:00</updated>
+  
+  <entry>
+    <title>La Tecnologia dei Sistemi di Controllo</title>
+    <author><name>Alessio Giordano</name></author>
+    <published>2023-12-29T00:00:00+01:00</published>
+    <updated>2023-12-29T00:00:00+01:00</updated>
+    <dv-img url="https://www.alessiogiordano.net/dv/tsc/wallpaper.jpg" type="image/jpg" />
+    <id>https://www.alessiogiordano.net/dv/tsc/</id>
+    <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/dv/tsc/"/>
+    <summary>Progetto di Tecnologia dei Sistemi di Controllo per l'Anno Accademico 2023-24 di Alessio Giordano, Alberto Provenzano, Daniele Lucifora</summary>
+  </entry>
+  
+  <entry>
+    <title>Melina 70</title>
+    <author><name>Alessio Giordano</name></author>
+    <published>2021-11-20T00:00:00+01:00</published>
+    <updated>2021-11-20T00:00:00+01:00</updated>
+    <dv-img url="https://www.alessiogiordano.net/dv/melina70/wallpaper.jpg" type="image/jpg" />
+    <id>https://www.alessiogiordano.net/dv/melina70/</id>
+    <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/dv/melina70/"/>
+    <summary>Compleanno della Zia Melina al Ristorante "La Polena" di Acireale</summary>
+  </entry>
+  
+  <entry>
+    <title>Sales Festival Night</title>
+    <author><name>Alessio Giordano</name></author>
+    <published>2017-01-24T00:00:00+01:00</published>
+    <updated>2017-01-24T00:00:00+01:00</updated>
+    <dv-img url="https://www.alessiogiordano.net/dv/scecilia/wallpaper.jpg" type="image/jpg" />
+    <id>https://www.alessiogiordano.net/dv/scecilia/index.html</id>
+    <link rel="alternate" type="text/html" href="https://www.alessiogiordano.net/dv/scecilia/"/>
+    <summary>La serata di Santa Cecilia del 2016</summary>
+  </entry>
+  
+</feed>

@@ -7,6 +7,25 @@
   <description>I Prodotti di Alessio Giordano</description>
   
   <item>
+    <title>JOHN Editor</title>
+    <description>Un'applicazione che fornisce un'interfaccia utente grafica per il JOHN Runtime per Swift</description>
+    <category>Sviluppatori</category>
+    <price>Gratis</price>
+    <link>https://john.cloudsuite.university/</link>
+    <icon url="john/icon.png" type="image/png" />
+    <mac>https://apps.apple.com/app/id6474180117</mac>
+  </item>
+  
+  <item>
+    <title>Damiera</title>
+    <description>Remake di Chess.app, ma con dama invece di scacchi</description>
+    <category>Giochi da Tavolo</category>
+    <price>Gratis</price>
+    <link>/products/damiera/</link>
+    <icon url="damiera/icon.png" type="image/png" />
+  </item>
+  
+  <item>
     <title>Tombola</title>
     <description>Fai il banco in una partita di Tombola in video conferenza</description>
     <category>Giochi da Tavolo</category>

@@ -18,11 +18,6 @@
      src: url('font/tempo.ttf');
      font-weight: normal;
 }
-@font-face {
-    font-family: Roundhand;
-    src: url('font/roundhand.otf');
-    font-weight: normal;
-}
 /* Instead of just failing I tell the user the issue */
 noscript {
     position: fixed;
@@ -52,8 +47,7 @@ noscript {
     -moz-perspective: 1000;
     -ms-perspective: 1000;
     perspective: 1000;
-    background: url('wallpaper.jpg') no-repeat center;
-    background-size: cover;
+    background: url('wallpaper.jpg') no-repeat center/cover;
     /* Minimal blur for browser not supporting backdrop filter */
     filter: blur(3px);
     width: 100%;
@@ -328,40 +322,40 @@ header {
     background-size: cover;
 }
 #h-volume1 {
-    background-image: url("volume-up.svg");
+    background-image: url("glyph/volume-up.svg");
 }
 #h-volume2 {
-    background-image: url("volume-up.svg");
+    background-image: url("glyph/volume-up.svg");
 }
 #h-reload {
-    background-image: url("reload.svg");
+    background-image: url("glyph/reload.svg");
 }
 #h-back {
-    background-image: url("back.svg");
+    background-image: url("glyph/back.svg");
 }
 #h-backVideo {
-    background-image: url("back.svg");
+    background-image: url("glyph/back.svg");
 }
 #h-prev {
-    background-image: url("prev.svg");
+    background-image: url("glyph/prev.svg");
     margin: 0 1em;
 }
 #h-play {
-    background-image: url("player.svg");
+    background-image: url("glyph/player.svg");
 }
 #h-pause {
-    background-image: url("pause.svg");
+    background-image: url("glyph/pause.svg");
     display: none;
 }
 #h-next {
-    background-image: url("next.svg");
+    background-image: url("glyph/next.svg");
     margin: 0 1em;
 }
 #h-fullIn {
-    background-image: url("fullIn.svg");
+    background-image: url("glyph/fullIn.svg");
 }
 #h-fullOut {
-    background-image: url("fullOut.svg");
+    background-image: url("glyph/fullOut.svg");
     display: none;
 }
 .h-button:hover {
@@ -542,7 +536,7 @@ header {
     background: transparent;
     padding-top: 0.2em;
     z-index: 10000;
-    margin-top: -1.2em;
+    margin-top: -1.1em; /* Was -1.2em */
 }
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -954,4 +948,93 @@ input[type=range]:focus {
 @keyframes sk-circleFadeDelay {
   0%, 39%, 100% { opacity: 0; }
   40% { opacity: 1; } 
+}
+
+/* Fixed Firefox filter/backdrop-filter incompatibility */
+
+@-moz-document url-prefix() {
+    #wallpaper {
+        filter: none!important;
+    }
+    #wallpaper::after {
+        backdrop-filter: blur(4px)!important; /* Up from 3px */
+    }
+}
+
+
+/* Fixed scroll bar */
+
+.folder-body {
+    overflow-x: auto;
+    --scrollbar-mask:
+        linear-gradient(black, black),
+        linear-gradient(90deg, 
+            transparent 0px,
+            black 1em,
+            black calc(100% - 1em),
+            transparent 100%
+        ),
+        linear-gradient(black, black);
+    -webkit-mask: var(--scrollbar-mask);
+    mask: var(--scrollbar-mask);
+    --scrollbar-mask-size: 
+        100% 1em,
+        100% calc(100% - 2em),
+        100% 1em;
+    -webkit-mask-size: var(--scrollbar-mask-size);
+    mask-size: var(--scrollbar-mask-size);
+    --scrollbar-mask-position: 
+        top center,
+        center center,
+        bottom center;
+    -webkit-mask-position: var(--scrollbar-mask-position);
+    mask-position: var(--scrollbar-mask-position);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    /* scroll-snap-type: x proximity; */
+}
+@-moz-document url-prefix() {
+    .folder-body {
+        scrollbar-width: thin;
+        scrollbar-gutter: stable;
+        scrollbar-color: white transparent;
+    }
+}
+.folder-block {
+    /* scroll-snap-align: start; */
+}
+@media screen and (max-width: 850px), (max-height: 587px) {
+    .folder-body {
+        --scrollbar-mask: initial;
+        --scrollbar-mask-size: initial;
+        --scrollbar-mask-position: initial;
+    }
+}
+.folder-body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.folder-body::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    /* border-left: 1px solid transparent;
+    background-clip: content-box; */
+}
+.folder-body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+.folder-body::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+/* Added support for the View Transition API */
+
+@view-transition {
+    navigation: auto;
+}
+::view-transition-group(root) {
+  animation-duration: 150ms;
+  animation-timing-function: ease;
 }

@@ -7,6 +7,25 @@
   <description>The Alessio Giordano Products</description>
   
   <item>
+    <title>JOHN Editor</title>
+    <description>A document-based application that provides a graphical user interface to the JOHN Runtime for Swift</description>
+    <category>Development</category>
+    <price>Gratis</price>
+    <link>https://john.cloudsuite.university/</link>
+    <icon url="john/icon.png" type="image/png" />
+    <mac>https://apps.apple.com/app/id6474180117</mac>
+  </item>
+  
+  <item>
+    <title>Damiera</title>
+    <description>A remake of Chess.app, but for playing checkers</description>
+    <category>Board Games</category>
+    <price>Free</price>
+    <link>/products/damiera/</link>
+    <icon url="damiera/icon.png" type="image/png" />
+  </item>
+  
+  <item>
     <title>Tombola</title>
     <description>Play a game of Tombola via any video call service</description>
     <category>Board Games</category>

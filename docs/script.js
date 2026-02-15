@@ -1,7 +1,7 @@
 // Script del sito personale "alessiogiordano.net" al 01/02/20
 
 function AGinternationalize() {
-	var language = navigator.language || navigator.userLanguage;
+	let language = navigator.language || navigator.userLanguage;
 	switch(language.substring(0,2)) {
 			case "it": document.documentElement.lang = "it"; AGita(); break;
 			default: document.documentElement.lang = "en"; break;
@@ -11,24 +11,41 @@ function AGita() {
 	if(document.querySelectorAll("#AGone").length != 0) {
 		// HomePage
 		document.querySelector("#AGone .AGlabel").innerText = "Prodotti";
-		document.querySelector("#AGtwo .AGlabel").innerText = "Blog";
+		document.querySelector("#AGtwo .AGlabel").innerText = "Filmini";
+		//document.querySelector("#AGtwo .AGlabel").innerText = "Blog";
 		document.querySelector("#AGthree .AGlabel").innerText = "Contatti";
 		document.getElementById("AGtemp").innerText = "Carico le previsioni...";
-		document.querySelector("#AGcopy span").innerText = "Tutte le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
+		document.querySelector("#AGcopy span").innerText = "Tutti i diritti riservati. Le emoji presenti in questa pagina sono usate sotto licenza CC BY-SA 4.0 da OpenMoji. Le previsioni del tempo sono fornite dalla API gratuita di Open Weather Map sotto licenza CC BY-SA 4.0";
 	} else if(document.querySelectorAll("#AGsubscribe").length != 0) {
-		// Blog
-		document.querySelector("#AGsubscribe").innerText = "Iscriviti al feed RSS";
-		document.querySelector("#AGsubscribe").href = "it.xml";
-		document.querySelector("input[type='search']").placeholder = "Cerca post del blog...";
-		document.querySelector(".AGloader h1").innerText = "Attendi mentre i post vengono caricati";
+	    if (document.querySelector("#AGsubscribe").dataset.kind == "dv") {
+	        // DV
+	        document.querySelector("#AGsubscribe").innerText = "Iscriviti al feed RSS";
+		    document.querySelector("input[type='search']").placeholder = "Cerca filmini...";
+		    document.querySelector(".AGloader h1").innerText = "Attendi mentre i filmini vengono caricati";
+		    document.querySelector("title").innerText = "Filmini - alessiogiordano.net";
+		    document.querySelector("#AGlevel1 .AGbreadtitle").innerText = "Filmini";
+	    } else {
+            // Blog
+            document.querySelector("#AGsubscribe").innerText = "Iscriviti al feed RSS";
+            document.querySelector("#AGsubscribe").href = "it.xml";
+            document.querySelector("input[type='search']").placeholder = "Cerca post del blog...";
+            document.querySelector(".AGloader h1").innerText = "Attendi mentre i post vengono caricati";
+	    }
 	} else if(document.querySelectorAll("#AGcontactspage").length != 0) {
 		// Contacts
+		document.querySelector("title").innerText = "Contatti - alessiogiordano.net";
 		document.querySelectorAll(".AGbreadtitle")[1].innerText = "Contatti";
 		document.querySelectorAll(".AGconlink")[0].childNodes[1].innerText = "Invia un messaggio di posta";
-		document.querySelectorAll(".AGconlink")[1].childNodes[1].innerText = "Iscriviti al feed RSS"
-		document.querySelectorAll(".AGconlink")[2].childNodes[1].innerText = "Segui su Twitter"
+		document.querySelectorAll(".AGconlink")[1].dataset.href = "/contacts/cv/it";
+		document.querySelectorAll(".AGconlink")[1].childNodes[1].innerText = "Visualizza il curriculum vitae";
+		document.querySelectorAll(".AGconlink")[2].childNodes[1].innerText = "Segui su LinkedIn";
+		document.querySelectorAll(".AGconlink")[3].childNodes[1].innerText = "Segui su Instagram";
+		document.querySelectorAll(".AGconlink")[4].childNodes[1].innerText = "Visualizza repository su GitHub";
+		//document.querySelectorAll(".AGconlink")[1].childNodes[1].innerText = "Iscriviti al feed RSS";
+		//document.querySelectorAll(".AGconlink")[2].childNodes[1].innerText = "Segui su Twitter";
 	} else if(document.querySelectorAll(".AGproduct").length != 0) {
 		// Products
+		document.querySelector("title").innerText = "Prodotti - alessiogiordano.net";
 		document.querySelectorAll(".AGbreadtitle")[1].innerText = "Prodotti";
 		document.querySelector(".AGloader h1").innerText = "Attendi mentre i prodotti vengono caricati";
 	} else if(document.querySelectorAll(".AGnotfound").length != 0) {
@@ -122,7 +139,7 @@ function AGgetweather() {
 			return 2
 		}
 	}
-	var freshness = new Date().getTime() - localStorage.getItem("AGweathertimestamp-" + document.documentElement.lang);
+	let freshness = new Date().getTime() - localStorage.getItem("AGweathertimestamp-" + document.documentElement.lang);
 	if(freshness < 4000) {
 		AGupdateweather(localStorage.getItem("AGweatherrequest-" + document.documentElement.lang));
 		return 1
@@ -132,7 +149,7 @@ function AGgetweather() {
 		case "it": document.getElementById("AGtemp").innerText = "Carico le previsioni..."; break;
 		default: document.getElementById("AGtemp").innerText = "Loading forecast..."; break;
 	}
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.onreadystatechange = function() {
 		if(this.readyState == 4 && this.status == 200) {
 			// Recevied Data
@@ -163,27 +180,27 @@ function AGactivatehref() {
 	}
 }
 function AGgetblogposts() {
-	var feed = "";
-	var language = navigator.language || navigator.userLanguage;
+	let feed = "";
+	let language = navigator.language || navigator.userLanguage;
 	switch(language.substring(0,2)) {
 		case "it": feed = "it.xml"; break;
 		default: feed = "en.xml"; break;
 	}
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
-			var dom = request.responseXML;
-			var articles = dom.getElementsByTagName("entry");
-			var existing = document.querySelectorAll('section');
+			let dom = request.responseXML;
+			let articles = dom.getElementsByTagName("entry");
+			let existing = document.querySelectorAll('section');
 			for (let i = 0; i < existing.length; i++) {
 				existing[i].parentNode.removeChild(existing[i]);
 			}
 			
 			for (let i = 0; i < articles.length; i++) {
 				
-				var title, category, date, url, image, description;
-				var darkIsAvailable = false;
-				var article = articles[i].childNodes;
+				let title, category, date, url, image, description;
+				let darkIsAvailable = false;
+				let article = articles[i].childNodes;
 				
 				for (let j = 0; j < article.length; j++) {
 					switch(article[j].tagName) {
@@ -197,7 +214,7 @@ function AGgetblogposts() {
 					}
 				}
 				
-				var section = document.createElement("section"); 
+				let section = document.createElement("section"); 
 				section.classList.add("AGactivatehref");
 				section.dataset.title = title;
 				section.dataset.description = description;
@@ -205,7 +222,7 @@ function AGgetblogposts() {
 				section.dataset.date = date;
 				section.dataset.href = url.replace("https://www.alessiogiordano.net/blog/", "");
 				
-				var body = '<div class="AGarticleinfo"><p><b>';
+				let body = '<div class="AGarticleinfo"><p><b>';
 				body += category;
 				body += '</b> ';
 				body += date;
@@ -235,28 +252,83 @@ function AGgetblogposts() {
 	request.open("GET", feed, true);
 	request.send();
 }
+// AGgetblogposts adapted for fetching DV movies
+function AGgetmovies() {
+	let feed = "rss.xml";
+	let request = new XMLHttpRequest();
+	request.onreadystatechange= function() {
+		if(this.readyState == 4 && this.status == 200) {
+			let dom = request.responseXML;
+			let articles = dom.getElementsByTagName("entry");
+			let existing = document.querySelectorAll('section');
+			for (let i = 0; i < existing.length; i++) {
+				existing[i].parentNode.removeChild(existing[i]);
+			}
+			
+			for (let i = 0; i < articles.length; i++) {
+				
+				let title, iso8601, href, image, description;
+				let article = articles[i].childNodes;
+				
+				for (let j = 0; j < article.length; j++) {
+					switch(article[j].tagName) {
+						case "title": title = article[j].textContent; break;
+						case "published": iso8601 = article[j].textContent; break;
+						case "link": href = article[j].getAttribute('href'); break;
+						case "dv-img": image = article[j].getAttribute('url'); break;
+						case "summary": description = article[j].textContent; break;
+						default: break;
+					}
+				}
+				
+				let section = document.createElement("section"); 
+				section.classList.add("DVsection");
+				section.classList.add("AGactivatehref");
+				section.dataset.title = title;
+				section.dataset.description = description;
+				section.dataset.href = href.replace("https://www.alessiogiordano.net/dv/", "");
+				
+				let body = '<div class="AGarticleinfo"><h1>';
+				body += title;
+				body += '</h1><h4>';
+				body += description;
+				body += '</h4></div>';
+				body += '<img src="' + image.replace("https://www.alessiogiordano.net/dv/", "") + '" />';
+				
+				section.innerHTML = body;
+				
+				document.getElementById("AGarticle").appendChild(section);
+				
+			}
+			AGfilter();
+			AGactivatehref();
+		}
+	}
+	request.open("GET", feed, true);
+	request.send();
+}
 
 function AGgetproducts() {
-	var feed = "";
-	var language = navigator.language || navigator.userLanguage;
+	let feed = "";
+	let language = navigator.language || navigator.userLanguage;
 	switch(language.substring(0,2)) {
 		case "it": feed = "it.xml"; break;
 		default: feed = "en.xml"; break;
 	}
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
-			var dom = request.responseXML;
-			var products = dom.getElementsByTagName("item");
-			var existing = document.querySelectorAll('section');
+			let dom = request.responseXML;
+			let products = dom.getElementsByTagName("item");
+			let existing = document.querySelectorAll('section');
 			for (let i = 0; i < existing.length; i++) {
 				existing[i].parentNode.removeChild(existing[i]);
 			}
 			
 			for (let i = 0; i < products.length; i++) {
 				
-				var title, description, category, price, link, icon, ios, iphone, ipad, watch, tv, mac;
-				var product = products[i].childNodes;
+				let title, description, category, price, link, icon, ios, iphone, ipad, watch, tv, mac;
+				let product = products[i].childNodes;
 				
 				for (let j = 0; j < product.length; j++) {
 					switch(product[j].tagName) {
@@ -272,7 +344,7 @@ function AGgetproducts() {
 					}
 				}
 				
-				var section = document.createElement("section"); 
+				let section = document.createElement("section"); 
 				section.classList.add("AGproduct");
 				section.dataset.title = title;
 				section.dataset.description = description;
@@ -285,14 +357,14 @@ function AGgetproducts() {
 				section.dataset.appletv = tv!=undefined ? iphone : "false";
 				section.dataset.mac = mac!=undefined ? "true" : "false";
 				
-				var body = '<div><h1>';
+				let body = '<div><h1>';
 				body += title;
 				body += '</h1><p>';
 				body += description;
 				body += '</p><h4>';
 				body += category;
 				body += ' - ';
-				var language = navigator.language.substring(0,2) || navigator.userLanguage.substring(0,2);
+				let language = navigator.language.substring(0,2) || navigator.userLanguage.substring(0,2);
 				if((ios!=undefined)&&(mac!=undefined)) {
 					if((iphone == "true") && (ipad == "true") && (watch == "true") && (tv == "true")) {
 						switch(language) {
@@ -467,19 +539,19 @@ function AGgetproducts() {
 }
 
 function AGgethighlights() {
-	var feed = "";
-	var language = navigator.language || navigator.userLanguage;
+	let feed = "";
+	let language = navigator.language || navigator.userLanguage;
 	switch(language.substring(0,2)) {
 		case "it": feed = "highlights/it.xml"; break;
 		default: feed = "highlights/en.xml"; break;
 	}
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
-			var highlight = request.responseXML.getElementsByTagName("item")[0];
+			let highlight = request.responseXML.getElementsByTagName("item")[0];
 				
-			var title, description, link, large, small;
-			var elements = highlight.childNodes;
+			let title, description, link, large, small;
+			let elements = highlight.childNodes;
 				
 			for (let i = 0; i < elements.length; i++) {
 				switch(elements[i].tagName) {
@@ -492,7 +564,7 @@ function AGgethighlights() {
 				}
 			}
 			
-			var container = document.querySelector("#AGmiddlerow");
+			let container = document.querySelector("#AGmiddlerow");
 			container.dataset.title = title;
 			container.dataset.description = description;
 			container.dataset.href = link;
@@ -507,24 +579,24 @@ function AGgethighlights() {
 }
 
 function AGgetdock() {
-	var feed = "";
-	var language = navigator.language || navigator.userLanguage;
+	let feed = "";
+	let language = navigator.language || navigator.userLanguage;
 	switch(language.substring(0,2)) {
 		case "it": feed = "products/it.xml"; break;
 		default: feed = "products/en.xml"; break;
 	}
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
-			var dom = request.responseXML;
-			var products = dom.getElementsByTagName("item");
-			var existing = document.querySelectorAll('section');
+			let dom = request.responseXML;
+			let products = dom.getElementsByTagName("item");
+			let existing = document.querySelectorAll('section');
 			for (let i = 0; i < existing.length; i++) {
 				existing[i].parentNode.removeChild(existing[i]);
 			}
 			
-			var max = (products.length < 3) ? products.length : 3;
-			var dock = [
+			let max = (products.length < 3) ? products.length : 3;
+			let dock = [
 				document.querySelector("#AGfour"),
 				document.querySelector("#AGfive"),
 				document.querySelector("#AGsix")
@@ -532,8 +604,8 @@ function AGgetdock() {
 			
 			for (let i = 0; i < max; i++) {
 				
-				var title, link, icon;
-				var product = products[i].childNodes;
+				let title, link, icon;
+				let product = products[i].childNodes;
 				
 				for (let j = 0; j < product.length; j++) {
 					switch(product[j].tagName) {
@@ -562,9 +634,9 @@ function AGgetdock() {
 }
 
 function AGfilter() {
-	var keyword = new RegExp(document.querySelector("input[type='search']").value);
+	let keyword = new RegExp(document.querySelector("input[type='search']").value);
 	if(document.querySelectorAll(".AGloader").length == 0) {
-		var articles = document.querySelectorAll('section');
+		let articles = document.querySelectorAll('section');
 		for (let i = 0; i < articles.length; i++) {
 			if((keyword.test(articles[i].dataset.title)) || (keyword.test(articles[i].dataset.description)) || (keyword.test(articles[i].dataset.date)) || (keyword.test(articles[i].dataset.category))) {
 				articles[i].style.display = "flex";

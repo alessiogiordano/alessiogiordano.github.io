@@ -7,6 +7,7 @@
 	<meta name="application-name" content="The Alessio Giordano Blog" />
 	<meta name="author" content="Alessio Giordano" />
 	<meta name="description" content="Announcements about product releases and other stuff." />
+	<meta name="robots" content="noindex">
 	<meta charset="UTF-8" />
 	<!-- ------------------------------------ -->
 	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
@@ -14,7 +15,7 @@
 	<script src="/script.js"></script>
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="/style.css">
-	<link rel="alternate" type="application/rss+xml" title="Subscribe to the blog" href="en.rss" />
+	<link rel="alternate" type="application/rss+xml" title="Subscribe to the blog" href="en.xml" />
 	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#191919" media="(prefers-color-scheme: dark)">
 </head>
@@ -34,8 +35,8 @@
 	<div id="AGpage">
 		<article id="AGarticle">
 			<header>
-				<div id="AGsubscribe" class="AGactivatehref" data-href="en.xml">Subscribe to RSS feed</div>
-				<input type="search" placeholder="Search blog post..." oninput="AGfilter()" />
+				<div id="AGsubscribe" data-kind="blog" class="AGactivatehref" data-href="en.xml">Subscribe to RSS feed</div>
+				<input type="search" placeholder="Search blog posts..." oninput="AGfilter()" />
 			</header>
 			<section class="AGloader">
 				<h1>Please wait while the posts get loaded</h1>

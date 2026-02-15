@@ -1,0 +1,20 @@
+<!-- Redirect to /contacts/cv/*/ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curriculum Vitae - alessiogiordano.net</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex">
+        <noscript>
+            <meta http-equiv="refresh" content="0; url=/contacts/cv/en" />
+        </noscript>
+        <script>
+            let language = navigator.language || navigator.userLanguage;
+            switch(language.substring(0,2)) {
+                    case "it": window.location = "/contacts/cv/it"; break;
+                    default: window.location = "/contacts/cv/en"; break;
+            }
+        </script>
+    </head>
+    <body></body>
+</html>

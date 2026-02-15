@@ -5,6 +5,7 @@
 	<meta name="application-name" content="Damiera by AG" />
 	<meta name="author" content="Alessio Giordano" />
 	<meta name="description" content="Damiera by AG è un gioco di Dama realizzato in Unity sulla falsariga del gioco Scacchi preinstallato in Mac OS X" />
+	<meta name="robots" content="noindex">
 	<meta charset="UTF-8" />
 	<!-- ------------------------------------ -->
 	<meta name="keywords" content="Alessio Giordano, Alessio, Giordano, AG, Blog, iOS, App Store, iPhone, iPad, iPadOS, Swift, SwiftUI" />
@@ -31,7 +32,7 @@
 	</div>
 	<div id="AGpageshadow"></div>
 	<div id="AGpage" style="overflow: hidden;">
-		<canvas id="unity-canvas" width=960 height=600 style="width: 100%; height: calc(100% - 3em); pointer-events: all; background: url('Build/Damiera Seed 6 (WebGL).jpg') center / cover"></canvas>
+		<canvas id="unity-canvas" width=960 height=600 style="width: 100%; height: calc(100dvh - 3em); pointer-events: all; background: url('Build/Damiera Seed 6 (WebGL).jpg') center / cover"></canvas>
         <script src="Build/Damiera Seed 6 (WebGL).loader.js"></script>
         <script>
         createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -46,13 +47,13 @@
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         });
         </script>
-	<style>
-	@-moz-document url-prefix() {
-		canvas {
-			height: calc(100vh - 3em)!important;
-		}
-	}
-	</style>
+        <style>
+        @-moz-document url-prefix() {
+            canvas {
+                height: calc(100vh - 3em)!important;
+            }
+        }
+        </style>
 	</div>
 </body>
 </html>
