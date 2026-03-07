@@ -1,0 +1,366 @@
+:root, html, body {
+    color-scheme: dark;
+    background-color: black;
+    color: white;
+    font-family: Big Caslon, Palatino, serif;
+    margin: 0;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    scroll-behavior: smooth;
+    --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a {  color: white; opacity: 1; transition: opacity 0.125s; }
+a:active { opacity: 0.75; }
+
+/* Page Scaling */
+
+:root {
+    font-size: 1px;
+}
+body {
+    font-size: 16rem;
+}
+
+@media (max-width: 511px) {
+    :root {
+        font-size: calc(100vw / 512);
+    }
+}
+
+/* Cap width and center */
+
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    max-width: 600px;
+    --page-gap: 1em;
+}
+body:before, body:after {
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100dvh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 1024px;
+    left: 50%;
+    transform: translateX(-50%);
+    --light-gradient-color: rgb(45, 45, 45)
+}
+body:before {
+    background: radial-gradient(transparent 75%, var(--light-gradient-color));
+}
+body:after {
+    background: linear-gradient(to right, var(--light-gradient-color), transparent 15%,
+                                                                       transparent 85%, var(--light-gradient-color));
+}
+
+/* NAV */
+
+nav {
+    --nav-gap: var(--page-gap);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--nav-gap) * 1.5);
+    margin: calc(var(--nav-gap) * 3) auto;
+}
+
+nav * {
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+nav > img {
+    width: 25ch;
+    margin: 0 auto;
+    pointer-events: none;
+    image-rendering: optimizeQuality;
+}
+
+nav > h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 3em;
+}
+nav > h1.sans {
+    font-size: 5em;
+    font-family: var(--system-font);
+}
+
+nav > a { /* @social_handle */
+    font-family: var(--system-font);
+    font-weight: lighter;
+    text-decoration: none;
+    display: block;
+    width: min-content;
+    margin: 0 auto;
+}
+nav > a:has(> span:only-child) {
+    margin: initial;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    pointer-events: none;
+}
+nav > a:has(> span:only-child):before, nav > a:has(> span:only-child):after {
+    content: "";
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    width: 100%;
+}
+nav > a:has(> span:only-child) > span {
+    pointer-events: painted;
+}
+nav > a:has(> span:only-child):active {
+    opacity: 1;
+}
+nav > a:has(> span:only-child) > span:active {
+    opacity: 0.5;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--nav-gap);
+    margin: 0 var(--nav-gap);
+    padding: 0;
+}
+nav > ul > li { display: contents; }
+nav > ul > li > a {
+    font-family: var(--system-font);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BIO */
+
+figure {
+    margin: 0;
+    margin-bottom: calc(var(--page-gap) * 2);
+}
+
+figure > img, figure > p > img {
+    pointer-events: none;
+    --hero-mask-width: 2.1em;
+}
+
+figure > img {
+    width: 100%;
+    filter: contrast(1.25);
+    mask: linear-gradient(90deg, transparent 0px,
+                               black var(--hero-mask-width),
+                               black calc(100% - var(--hero-mask-width)),
+                                 transparent 100%);
+}
+
+figure > p {
+    margin: var(--page-gap);
+    position: relative;
+    isolation: isolate;
+    text-align: justify;
+    text-shadow: 0 0 5px black;
+}
+figure > p.sans {
+    font-family: var(--system-font);
+    font-weight: 200;
+}
+
+figure > p > img {
+    opacity: 0.5;
+    transform: scaleY(-1);
+    filter: blur(3px);
+    position: absolute;
+    left: 0;
+    top: calc(-4px + (-1 * var(--page-gap)));
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    max-height: fit-content;
+    object-fit: cover;
+    object-position: bottom;
+    mask: linear-gradient(to top, black, transparent 100%), linear-gradient(90deg, transparent 0px, black var(--hero-mask-width), black calc(100% - var(--hero-mask-width)), transparent 100%);
+    mask-composite: intersect;
+}
+
+/* MAIN */
+
+main > section {
+    display: flex;
+    gap: var(--page-gap);
+    margin: 0;
+    padding: var(--page-gap);
+    justify-content: space-between;
+    position: relative;
+    isolation: isolate;
+    contain: paint;
+}
+
+main > section:before, main > section:last-child:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    z-index: 1;
+}
+main > section:last-child:after {
+    top: auto;
+    bottom: 0;
+}
+
+main > section * {
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+}
+
+main > section > h2 {
+    font-family: var(--system-font);
+    font-weight: bold;
+    font-size: 1em;
+    flex-shrink: 0;
+    margin: 0;
+    z-index: 1;
+    text-shadow: 0 0 15px black;
+}
+
+main > section > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--page-gap);
+    justify-content: end;
+    max-width: 65%;
+    margin: 0;
+    align-content: baseline;
+}
+main > section > ul > li { display: contents; }
+
+main > section > ul > li > a {
+    font-family: var(--system-font);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1em;
+    flex-shrink: 0;
+    margin: 0;
+    z-index: 1;
+    max-width: 100%;
+    text-align: right;
+}
+main > section:has(.active) > ul > li > a {
+    text-shadow: 0 0 1px transparent, 0 0 15px black;
+    opacity: 0.5;
+}
+main > section:has(.active) > ul > li.active > a {
+    opacity: 1;
+    text-shadow: 0 0 1px white, 0 0 15px black;
+}
+
+main > section:has(.active) > ul > li.active > img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    will-change: visibility, opacity;
+}
+main > section:has(.active) > ul:before, main > section:has(.active) > ul:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+main > section:has(.active) > ul:before {
+    /*
+    mask: linear-gradient(to left, black, transparent);
+    mask: linear-gradient(to left, black, transparent 65%,
+                                            transparent 80%, rgba(0, 0, 0, 0.25) 90%,
+                                                                rgba(0, 0, 0, 0.45) 95%, 
+                                                                rgba(0, 0, 0, 0.6) 97%,
+                                                                rgba(0, 0, 0, 0.8) calc(100% - 7px), black);
+    */
+    mask: linear-gradient(to left, black, rgba(0, 0, 0, 0)     45%,
+                                            rgba(0, 0, 0, 0)     80%,
+                                            rgba(0, 0, 0, 0.002) 82.5%,
+                                            rgba(0, 0, 0, 0.016) 85%,
+                                            rgba(0, 0, 0, 0.053) 87.5%,
+                                            rgba(0, 0, 0, 0.125) 90%,
+                                            rgba(0, 0, 0, 0.244) 92.5%,
+                                            rgba(0, 0, 0, 0.422) 95%,
+                                            rgba(0, 0, 0, 0.670) 97.5%,  black);
+    background: black;
+    will-change: opacity;
+}
+main > section:has(.active) > ul:after {
+    /*
+    mask: linear-gradient(to left, black 60%, transparent);
+    */
+    mask: linear-gradient(to left, black 35%, transparent);
+    backdrop-filter: blur(6px) saturate(1.5);
+    will-change: opacity;
+}
+
+main > section > ul > li > img {
+    display: none;
+    pointer-events: none;
+}
+
+/* FOOTER */
+
+footer {
+    display: block;
+    text-align: center;
+    margin: calc(var(--page-gap) * 2) 0;
+}
+footer.sans {
+    font-family: var(--system-font);
+    font-weight: 200;
+}
+
+
+/* PAGINATION */
+
+html.pagination {
+    scroll-snap-type: y mandatory;
+}
+
+html.pagination header {
+    scroll-snap-align: start;
+    scroll-margin-top: 3em;
+}
+
+html.pagination main > section {
+    height: 80dvh;
+    scroll-snap-align: center;
+}
+
+html.pagination main > section > ul {
+    flex-flow: column;
+    justify-content: start;
+    text-align: right;
+    flex-wrap: wrap-reverse;
+}
+
+html.pagination footer {
+    scroll-snap-align: end;
+    scroll-margin-bottom: 3em;
+}
