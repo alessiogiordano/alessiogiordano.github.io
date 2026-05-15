@@ -254,58 +254,89 @@ function AGgetblogposts() {
 }
 // AGgetblogposts adapted for fetching DV movies
 function AGgetmovies() {
-	let feed = "rss.xml";
-	let request = new XMLHttpRequest();
-	request.onreadystatechange= function() {
+    let feed = "rss.xml";
+    let outerRequest = new XMLHttpRequest();
+    outerRequest.onreadystatechange= function() {
 		if(this.readyState == 4 && this.status == 200) {
-			let dom = request.responseXML;
+			let dom = outerRequest.responseXML;
 			let articles = dom.getElementsByTagName("entry");
-			let existing = document.querySelectorAll('section');
-			for (let i = 0; i < existing.length; i++) {
-				existing[i].parentNode.removeChild(existing[i]);
-			}
-			
+			let hrefs = new Set();
 			for (let i = 0; i < articles.length; i++) {
-				
-				let title, iso8601, href, image, description;
-				let article = articles[i].childNodes;
-				
-				for (let j = 0; j < article.length; j++) {
+			    let article = articles[i].childNodes;
+			    let href;
+			    for (let j = 0; j < article.length; j++) {
 					switch(article[j].tagName) {
-						case "title": title = article[j].textContent; break;
-						case "published": iso8601 = article[j].textContent; break;
 						case "link": href = article[j].getAttribute('href'); break;
-						case "dv-img": image = article[j].getAttribute('url'); break;
-						case "summary": description = article[j].textContent; break;
 						default: break;
 					}
 				}
-				
-				let section = document.createElement("section"); 
-				section.classList.add("DVsection");
-				section.classList.add("AGactivatehref");
-				section.dataset.title = title;
-				section.dataset.description = description;
-				section.dataset.href = href.replace("https://www.alessiogiordano.net/dv/", "");
-				
-				let body = '<div class="AGarticleinfo"><h1>';
-				body += title;
-				body += '</h1><h4>';
-				body += description;
-				body += '</h4></div>';
-				body += '<img src="' + image.replace("https://www.alessiogiordano.net/dv/", "") + '" />';
-				
-				section.innerHTML = body;
-				
-				document.getElementById("AGarticle").appendChild(section);
-				
+				if (href != null) {
+				    hrefs.add(href.replace("https://www.alessiogiordano.net", ""));
+				}
 			}
-			AGfilter();
-			AGactivatehref();
-		}
+			//
+            let feed = "db.xml";
+            let innerRequest = new XMLHttpRequest();
+            innerRequest.onreadystatechange= function() {
+                if(this.readyState == 4 && this.status == 200) {
+                    let dom = innerRequest.responseXML;
+                    let articles = dom.getElementsByTagName("entry");
+                    let existing = document.querySelectorAll('section');
+                    for (let i = 0; i < existing.length; i++) {
+                        existing[i].parentNode.removeChild(existing[i]);
+                    }
+                    
+                    for (let i = 0; i < articles.length; i++) {
+                        
+                        let title, iso8601, href, image, description;
+                        let article = articles[i].childNodes;
+                        
+                        for (let j = 0; j < article.length; j++) {
+                            switch(article[j].tagName) {
+                                case "title": title = article[j].textContent; break;
+                                case "published": iso8601 = article[j].textContent; break;
+                                case "link": href = article[j].getAttribute('href'); break;
+                                case "dv-img": image = article[j].getAttribute('url'); break;
+                                case "summary": description = article[j].textContent; break;
+                                default: break;
+                            }
+                        }
+                        
+                        href = href.replace("https://www.alessiogiordano.net", "");
+                        
+                        if (!hrefs.has(href) && (localStorage.getItem(href) == null)) {
+                            continue
+                        }
+                        
+                        let section = document.createElement("section"); 
+                        section.classList.add("DVsection");
+                        section.classList.add("AGactivatehref");
+                        section.dataset.title = title;
+                        section.dataset.description = description;
+                        section.dataset.href = href.replace("/dv/", "");
+                        
+                        let body = '<div class="AGarticleinfo"><h1>';
+                        body += title;
+                        body += '</h1><h4>';
+                        body += description;
+                        body += '</h4></div>';
+                        body += '<img src="' + image.replace("https://www.alessiogiordano.net/dv/", "") + '" />';
+                        
+                        section.innerHTML = body;
+                        
+                        document.getElementById("AGarticle").appendChild(section);
+                        
+                    }
+                    AGfilter();
+                    AGactivatehref();
+                }
+            }
+            innerRequest.open("GET", feed, true);
+            innerRequest.send();
+        }
 	}
-	request.open("GET", feed, true);
-	request.send();
+	outerRequest.open("GET", feed, true);
+	outerRequest.send();
 }
 
 function AGgetproducts() {

@@ -400,3 +400,5 @@ function UpdateScrubBar() {
 function Stopp(event) {
     event.stopPropagation();
 };
+//
+window.localStorage.setItem(window.location.pathname, "");
