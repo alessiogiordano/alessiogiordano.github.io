@@ -358,7 +358,7 @@ function AGgetproducts() {
 			
 			for (let i = 0; i < products.length; i++) {
 				
-				let title, description, category, price, link, icon, ios, iphone, ipad, watch, tv, mac;
+				let title, description, category, price, link, icon, ios, iphone, ipad, watch, tv, mac, testflight;
 				let product = products[i].childNodes;
 				
 				for (let j = 0; j < product.length; j++) {
@@ -371,6 +371,7 @@ function AGgetproducts() {
 						case "icon": icon = product[j].getAttribute('url'); break;
 						case "ios": ios = product[j].textContent; iphone = product[j].getAttribute('iphone'); ipad = product[j].getAttribute('ipad'); watch = product[j].getAttribute('watch'); tv = product[j].getAttribute('tv'); break;
 						case "mac": mac = product[j].textContent; break;
+						case "testflight": testflight = product[j].textContent; break;
 						default: break;
 					}
 				}
@@ -387,6 +388,7 @@ function AGgetproducts() {
 				section.dataset.applewatch = watch!=undefined ? iphone : "false";
 				section.dataset.appletv = tv!=undefined ? iphone : "false";
 				section.dataset.mac = mac!=undefined ? "true" : "false";
+				section.dataset.testflight = testflight!=undefined ? "true" : "false";
 				
 				let body = '<div><h1>';
 				body += title;
@@ -538,6 +540,12 @@ function AGgetproducts() {
 						default: body += "For Mac"; break;
 					}
 					body += ' - ';
+				} else if(testflight!=undefined) {
+					switch(language) {
+						case "it": body += "Disponibile su TestFlight"; break;
+						default: body += "Available on TestFlight"; break;
+					}
+					body += ' - ';
 				}
 				
 				body += price;
@@ -553,6 +561,7 @@ function AGgetproducts() {
 					case "it": lang = "it"; break;
 					default: lang = "en"; break;
 				}
+				body += (testflight!=undefined) ? '<img src="../assets/testflight/testflight-' + lang + '.svg" class="AGactivatehref" data-href="' + testflight + '">' : "";
 				body += (mac!=undefined) ? '<img src="../assets/macappstore/light-' + lang + '.svg" class="AGlight AGactivatehref" data-href="' + mac + '"><img src="../assets/macappstore/dark-' + lang + '.svg" class="AGdark AGactivatehref" data-href="' + mac + '">' : "";
 				body += (ios!=undefined) ? '<img src="../assets/appstore/light-' + lang + '.svg" class="AGlight AGactivatehref" data-href="' + ios + '"><img src="../assets/appstore/dark-' + lang + '.svg" class="AGdark AGactivatehref" data-href="' + ios + '">' : "";
 				body += '</div></div>';

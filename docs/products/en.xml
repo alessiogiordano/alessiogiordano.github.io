@@ -7,10 +7,20 @@
   <description>The Alessio Giordano Products</description>
   
   <item>
+    <title>Auditorium</title>
+    <description>The audio recorder for iOS where what you see, is what is saved</description>
+    <category>Utility</category>
+    <price>Free</price>
+    <link>https://testflight.apple.com/join/By7kG5xF</link>
+    <icon url="auditorium/icon.png" type="image/png" />
+    <testflight>https://testflight.apple.com/join/By7kG5xF</testflight>
+  </item>
+  
+  <item>
     <title>JOHN Editor</title>
     <description>A document-based application that provides a graphical user interface to the JOHN Runtime for Swift</description>
     <category>Development</category>
-    <price>Gratis</price>
+    <price>Free</price>
     <link>https://john.cloudsuite.university/</link>
     <icon url="john/icon.png" type="image/png" />
     <mac>https://apps.apple.com/app/id6474180117</mac>

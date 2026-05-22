@@ -7,6 +7,16 @@
   <description>I Prodotti di Alessio Giordano</description>
   
   <item>
+    <title>Auditorium</title>
+    <description>Il registratore audio per iOS dove se lo vedi, è già salvato</description>
+    <category>Utility</category>
+    <price>Gratis</price>
+    <link>https://testflight.apple.com/join/By7kG5xF</link>
+    <icon url="auditorium/icon.png" type="image/png" />
+    <testflight>https://testflight.apple.com/join/By7kG5xF</testflight>
+  </item>
+  
+  <item>
     <title>JOHN Editor</title>
     <description>Un'applicazione che fornisce un'interfaccia utente grafica per il JOHN Runtime per Swift</description>
     <category>Sviluppatori</category>
